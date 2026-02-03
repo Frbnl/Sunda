@@ -1656,13 +1656,211 @@ footer{padding:20px 0;
     /* OR use this if you strictly want the box to be 3:4 ratio: height: 133vw; *
     /* 3. Ensure the portrait image covers the area correctly */
     background-size: cover;
-    background-position: center
+    background-position: center;
     /* 4. Adjusted Box Shadow for Mobile */
     /* Reducing the vertical offset (22px -> 10px) and blur (25px -> 15px) 
        keeps it looking clean on smaller screens */
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5)
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     /* Optional: Adjust margins if the mobile banner feels too high/low */
     margin-top: 0; 
     border-radius: 0 0 10px 10px; /* Only round bottom corners if top touches nav */
+    }
+}
+@media (max-width: 768px) {
+
+    /* --- 1. GLOBAL LAYOUT --- */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't widen the element */
+    }
+    /*Header*/
+    header {
+      backdrop-filter: blur(6px); 
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(111, 111, 111, 0.1) );
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      max-height: 70px;
+      display: flex;
+      align-items: center;
+      border-bottom: rgba(190, 190, 190, 0.5) 1px solid;
+      box-shadow: 0 5px 26px rgba(0, 0, 0, 0.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 54%;
+      z-index: 1000;
+      animation: drop 1s ease-out;
+    }
+    .brand {
+      margin-left: -90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0.42;
+    }
+    .brand div p {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      color: var(--abu);
+    }
+
+    header .logo {
+      width: 60px;
+      height: auto;
+      margin: 0;
+      margin-right: 20px;
+      margin-left: 100px;
+      -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1)); 
+      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+    }
+
+    header h1 {
+      font-size: 20px;
+      text-align: left;
+    }
+    /* --- . BANNER & HERO TEXT --- */
+    .banner {
+        height: 100vh;
+        /* Ensure you use the portrait image logic we discussed */
+        background-position: center;
+        background-size: cover;
+        margin-top: -16px;
+    }
+    .banner p {
+        font-size: 3em; /* Shrink the huge Sundanese text */
+        margin: 0 20px;
+        padding-top: 150px; /* Push text down a bit so it's not hidden by navbar */
+    }
+    .banner .subtext {
+        font-size: 1.2em; /* Shrink subtitle */
+        margin: -10px 20px;
+    }
+
+    /* --- 3. PROFILE SECTION (Fixes layout breaking) --- */
+    .profile-box {
+        flex-direction: column; /* Stack photo on top of text */
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+    .profile-photo {
+        flex: 0 0 auto;
+        width: 150px; /* Smaller profile pic for mobile */
+        height: 200px;
+    }
+    .profile-sidebar {
+        width: 100%; /* Remove fixed 500px width */
+        border-radius: 20px;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+    .social-bar {
+        justify-content: center; /* Center icons */
+    }
+
+    /* --- 4. WELCOME & PRINCIPAL (The "Welkom" box) --- */
+    .about {
+        grid-template-columns: 1fr; /* Stack left/right columns */
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .welkom {
+        min-width: auto; /* CRITICAL: Removes the 680px constraint */
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .pembukaan2 {
+        flex-direction: column; /* Stack principal photo and text */
+        text-align: center;
+    }
+    .kepsek-img {
+        height: 120px; /* Slightly smaller image */
+    }
+    aside {
+        width: 100%;
+        align-items: stretch; /* Make sidebar cards full width */
+    }
+    .info, .sosmed {
+        min-width: auto; /* Remove fixed 340px width */
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- 5. SPOTLIGHT SECTION (Fixes the "Too Big" issue) --- */
+    .spotlight {
+        display: flex;
+        flex-direction: column; 
+        margin-left: 0; /* Reset negative margins */
+        margin-right: 0;
+        min-width: auto; /* Remove max-content constraint */
+        width: 100%;
+        height: auto;
+    }
+    .spotlight-left {
+        width: 100%;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+    .spotlight-right {
+        height: 300px; /* Give image area a fixed height on mobile */
+        width: 100%;
+    }
+    .spotlight-title {
+        font-size: 2em; /* Smaller title */
+    }
+    .spotlight-btn {
+        width: 100%; /* Button full width */
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* --- 6. NEWS (BERITA) --- */
+    .berita-news {
+        flex-direction: column; /* Stack image and text */
+        max-width: 100%;
+    }
+    .gambar-berita {
+        width: 100%; /* Image full width */
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .berita-box {
+        width: 100%; /* Remove fixed 500px */
+        box-sizing: border-box;
+    }
+
+    /* --- 7. VIDEO SECTION --- */
+    .media .video-list {
+        display: flex;
+        flex-direction: column; /* Stack videos vertically */
+        gap: 20px;
+    }
+    .media .video-item iframe, 
+    .media .video-item img {
+        width: 100% !important; /* Force videos to fit screen width */
+        height: auto;
+        aspect-ratio: 16/9; /* Keep video ratio */
+    }
+    
+    /* --- 8. FOOTER & EXTRAS --- */
+    .lirik {
+        margin-left: 0; /* Reset negative margin on lyrics */
+        text-align: center;
+    }
+    .hymne-media, .mars-media {
+        position: static; /* Remove absolute positioning */
+        margin: 20px auto;
+        display: block;
+        width: 100%;
     }
 }
