@@ -25,6 +25,7 @@
 :root {
   --bg-light: #fcfcfc;
   --bg-box: #f4f4f4;
+  --bg-blue-04: rgba(122, 154, 189, 0.4);
   --header-dark: #29292999;
   --abu: #6c757d;
   --terang: #f4f4f4;
@@ -46,18 +47,60 @@
   --length: 25;
 }
 
-.dark-mode {
-  --default: #1b1b1b;
-  --bg-light: #1b1b1b;
-  --bg-box: #32323299;
-  --header-dark: #29292999;
-  --abu: #e3e3e3;
-  --terang: #f4f4f4;
-  --gelap: #343a40;
+/* Dark-mode overrides — add the .dark-mode class to <html> or <body> */
+.darkmode {
+  --bg-light: #0f1113;     
+  --bg-box: #121417;
+  --bg-box-lighter: #1a1c1f; 
+  --bg-box-05: rgba(18, 20, 23, 0.507);       /* card / box background */
+  --bg-blue-04: rgba(105, 142, 182, 0.4); /* blue accent background */
+  --header-dark: #0b0b0b99;
+  --abu: #cfcfd1;          /* muted text on dark */
+  --terang: #e9eef6;       /* light accents */
+  --gelap: #0b1220;
+  --text-white: #ececec;
+  /* Sejarah (dark variants) */
+  --hist-bg: #0f0d10;
+  --hist-card: #141214;
+  --hist-accent: #b77474;
+  --hist-gold: #8f6b2b;
+  --hist-muted: #9b8f82;
+  --text-dark: #ececec;
+  --radius: 12px;
+  /* Rainbow animation (slightly desaturated for dark) */
+  --purple: rgb(160, 86, 182);
+  --blue: rgb(54, 106, 179);
+  --green: rgb(45, 170, 146);
+  --white: #07070a;        /* base behind rainbow (dark) */
+  --anim-time: 45s;
+  --length: 25;
+  background:linear-gradient(
+  to bottom,
+  rgba(245,245,245,0) 20%,
+  rgba(0, 0, 0,0.7) 100%
+  ), linear-gradient(to left,
+  rgba(245,245,245,0) 70%,
+  rgba(0, 0, 0,0.7) 100%),
+  url('img/Banner_bg.jpeg') no-repeat;
+}
+.darkmode .banner {
+  background: linear-gradient(
+    to bottom,
+    rgba(245,245,245,0) 20%,
+    rgba(0, 0, 0,0.7) 100%
+  ), linear-gradient(
+    to left,
+    rgba(245,245,245,0) 70%,
+    rgba(0, 0, 0,0.7) 100%
+  ),
+  url('img/dark_banner.jpg') no-repeat;
+  background-size: 100%;
+  background-position: 0% 20%;
 }
 
+
 /* GENERAL BODY SETTINGS */
-body {
+html, body {
   /* Changed from solid color to transparent so fixed animation shows */
   background-color: transparent; 
   overflow-x:hidden;
@@ -78,7 +121,7 @@ body {
   height: 100vh;
   z-index: -999; /* Ensures it stays behind your content */
   overflow: hidden;
-  background: var(--white); /* Base color behind rainbow */
+  background: var(--bg-light); /* Base color behind rainbow */
 }
 
 .rainbow {
@@ -175,7 +218,7 @@ body {
   margin: 0 auto 10px;
   left: 2.1em;
 }
-.tombol-mode{
+.theme-switch{
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -205,7 +248,7 @@ body {
 .banner {
   background:linear-gradient(
   to bottom,
-  rgba(245,245,245,0) 2%,
+  rgba(245,245,245,0) 20%,
   rgba(0, 0, 0,0.7) 100%
   ), linear-gradient(to left,
   rgba(245,245,245,0) 70%,
@@ -215,7 +258,7 @@ body {
   background-position: 0% 20%;
   height: 101vh;
   margin-bottom: 20px;
-  margin-top: -16px;
+  margin-top: -25px;
   box-shadow: 0px 22px 25px rgba(0,0,0,0.5);
   border-radius: 10px;
 }
@@ -308,7 +351,7 @@ body {
 }
 header {
   backdrop-filter: blur(6px); 
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(111, 111, 111, 0.1) );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 2%, rgba(111, 111, 111, 0.1) );
   color: rgb(0, 0, 0);
   padding: 20px;
   max-height: 70px;
@@ -421,15 +464,19 @@ nav ul li a.aktip {
   font-weight: bold;
 }
 .profile-box{
-  
+
   display:flex;
   gap:24px;
-  background:#e6e6e6c2;
-  padding:24px;
-  border-radius:14px;
-  max-width:900px;
+  background:rgba(37, 113, 255, 0.267);
+  padding: 8px 0;
+  border-radius: 12px;
+  padding: 20px;
   margin:40px auto;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  border: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .profile-photo{
@@ -437,6 +484,7 @@ nav ul li a.aktip {
   aspect-ratio:3/4;
   border-radius:12px;
   overflow:hidden;
+  box-shadow: 0 12px 18px rgba(0,0,0,0.35);
 }
 .social-bar .icon{
   width:30px;
@@ -444,7 +492,7 @@ nav ul li a.aktip {
   border-radius:50%;
   border: 2px solid #22222200;
   background:#ffffff57;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -481,6 +529,7 @@ nav ul li a.aktip {
   flex:1;
   display:flex;
   flex-direction:column;
+  padding-right: 12px;
 }
 
 .profile-content h2{
@@ -532,6 +581,20 @@ nav ul li a.aktip {
   background:#4f6cff;
 }
 /* Hobi */
+.title-hobi{
+  text-align: left;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-family: proximanova ;
+  color: var(--text-white);
+}
+.owl-carousel{
+  margin-bottom: 60px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 30px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--bg-blue-04);
+}
 .hobi .item{
   position: relative;
   overflow: hidden;
@@ -785,6 +848,7 @@ nav ul li a.aktip {
   left: 11.78em;
 }
 .title-berita {
+  color: var(--text-white);
   text-align: left;
   font-size: 24px;
   margin-bottom: 10px;
@@ -809,7 +873,15 @@ nav ul li a.aktip {
   animation-timeline: view();
   animation-range: entry 0% cover 20%;  
 }
-
+.teks-news{
+  color: var(--text-white);
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
 .gambar-berita {
   width: 40%;   
   border-radius: 20px;
@@ -1008,13 +1080,10 @@ aside ul{
   left: 0em;
 }
 .media{
-  
+  opacity: 1;
   flex-direction: row;
   gap: 12px;
-  transition: 0.3s;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+
 }
 .video-item :hover{
   transform: scale(1.04);
@@ -1455,6 +1524,12 @@ footer{padding:20px 0;
   }
 }
 /* Sejarah */
+.title-pg-sejarah{
+  text-align: center;
+  font-size: 36px;
+  padding-top: 140px;
+  color: var(--text-white);
+}
 .hal-sejarah .sejarah-container {
   padding: 40px 20px;
   max-width: 1100px;
@@ -1474,13 +1549,14 @@ footer{padding:20px 0;
 }
 .sejarah-hero .hero-inner h1 {
   margin: 0 0 8px;
-  color: black;
+  color: var(--text-white);
   font-size: 2.4em;
   font-family: 'mdserif';
 }
 .sejarah-hero .hero-inner p {
   margin: 0;
   font-size: 15px;
+  color: var(--abu);
 }
 .sejarah-hero .hero-img {
   width: 100%;
@@ -1496,6 +1572,7 @@ footer{padding:20px 0;
 }
 .timeline h2 { 
   margin-bottom:15px; 
+  color: var(--text-white);
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
@@ -1510,25 +1587,26 @@ footer{padding:20px 0;
   margin-bottom: 20px;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
   padding: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.501);
   border-radius: 10px;
   border-left: 6px solid goldenrod;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
 }
 .timeline li time {
   font-weight: bold;
-  color: black;
+  color: var(--text-white);
   min-width: 95px;
   padding: 7px;
+  color: var(--text-white);
 }
 .timeline .event h3 {
   line-height: 0.1;
   font-size: 18px;
+  color: var(--text-white);
 }
 .timeline .event p { 
   margin: 0; 
   font-size: 14px; 
+  color: var(--text-white);
 }
 /*Hymne&Mars*/
 .lagu{
@@ -1561,7 +1639,8 @@ footer{padding:20px 0;
     cursor: pointer;
     margin-left: auto; 
     z-index: 1001; /* Above dropdown */
-    padding-right: 50px;
+    padding-right: 0;
+    margin-right: 0px;
 }
 
 .bar {
@@ -1579,6 +1658,7 @@ footer{padding:20px 0;
     /* Show Hamburger */
     .hamburger {
         display: block;
+        margin-left: 50px;
     }
 
     /* Style the Navigation Container for Mobile */
@@ -1651,216 +1731,351 @@ footer{padding:20px 0;
         rgba(245,245,245,0) 2%,
         rgba(0, 0, 0,0.7) 100%
     ), url('img/banner-potrait.jpg');
-    /* 2. Set height to fit the screen or use aspect-ratio if you want strict 3:4 sizing */
-    height: 100vh; /* Keeps it full screen height */
-    /* OR use this if you strictly want the box to be 3:4 ratio: height: 133vw; *
-    /* 3. Ensure the portrait image covers the area correctly */
+    height: 100vh; 
     background-size: cover;
     background-position: center;
-    /* 4. Adjusted Box Shadow for Mobile */
-    /* Reducing the vertical offset (22px -> 10px) and blur (25px -> 15px) 
-       keeps it looking clean on smaller screens */
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-    /* Optional: Adjust margins if the mobile banner feels too high/low */
     margin-top: 0; 
-    border-radius: 0 0 10px 10px; /* Only round bottom corners if top touches nav */
+    border-radius: 0 0 10px 10px; 
+    }
+    .darkmode .banner {
+    background: linear-gradient(
+      to bottom,
+      rgba(245,245,245,0) 20%,
+      rgba(0, 0, 0,0.7) 100%
+    ), linear-gradient(
+      to left,
+      rgba(245,245,245,0) 70%,
+      rgba(0, 0, 0,0.7) 100%
+    ),
+    url('img/dark_banner.jpg') no-repeat;
+    background-size: 100%;
+    background-position: 0% 20%;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 0; 
+    border-radius: 0 0 10px 10px; 
     }
 }
+
+/* --- MOBILE LAYOUT TUNING --- */
 @media (max-width: 768px) {
+  body {
+    padding-top: 72px;
+  }
 
-    /* --- 1. GLOBAL LAYOUT --- */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    .container {
-        padding: 15px;
-        margin: 10px auto;
-        width: 100%;
-        box-sizing: border-box; /* Ensures padding doesn't widen the element */
-    }
-    /*Header*/
-    header {
-      backdrop-filter: blur(6px); 
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(111, 111, 111, 0.1) );
-      color: rgb(0, 0, 0);
-      padding: 20px;
-      max-height: 70px;
-      display: flex;
-      align-items: center;
-      border-bottom: rgba(190, 190, 190, 0.5) 1px solid;
-      box-shadow: 0 5px 26px rgba(0, 0, 0, 0.08);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 54%;
-      z-index: 1000;
-      animation: drop 1s ease-out;
-    }
-    .brand {
-      margin-left: -90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 0.42;
-    }
-    .brand div p {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      color: var(--abu);
-    }
+  header {
+    padding: 12px 10px;
+    max-height: none;
+  }
 
-    header .logo {
-      width: 60px;
-      height: auto;
-      margin: 0;
-      margin-right: 20px;
-      margin-left: 100px;
-      -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1)); 
-      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
-    }
+  header .logo {
+    width: 44px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 
-    header h1 {
-      font-size: 20px;
-      text-align: left;
-    }
-    /* --- . BANNER & HERO TEXT --- */
-    .banner {
-        height: 100vh;
-        /* Ensure you use the portrait image logic we discussed */
-        background-position: center;
-        background-size: cover;
-        margin-top: -16px;
-    }
-    .banner p {
-        font-size: 3em; /* Shrink the huge Sundanese text */
-        margin: 0 20px;
-        padding-top: 150px; /* Push text down a bit so it's not hidden by navbar */
-    }
-    .banner .subtext {
-        font-size: 1.2em; /* Shrink subtitle */
-        margin: -10px 20px;
-    }
+  header h1 {
+    font-size: 16px;
+  }
 
-    /* --- 3. PROFILE SECTION (Fixes layout breaking) --- */
-    .profile-box {
-        flex-direction: column; /* Stack photo on top of text */
-        align-items: center;
-        padding: 15px;
-        gap: 15px;
-        text-align: center;
-    }
-    .profile-photo {
-        flex: 0 0 auto;
-        width: 150px; /* Smaller profile pic for mobile */
-        height: 200px;
-    }
-    .profile-sidebar {
-        width: 100%; /* Remove fixed 500px width */
-        border-radius: 20px;
-        margin-top: 20px;
-        box-sizing: border-box;
-    }
-    .social-bar {
-        justify-content: center; /* Center icons */
-    }
+  .brand div p {
+    font-size: 11px;
+  }
 
-    /* --- 4. WELCOME & PRINCIPAL (The "Welkom" box) --- */
-    .about {
-        grid-template-columns: 1fr; /* Stack left/right columns */
-        display: flex;
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    .welkom {
-        min-width: auto; /* CRITICAL: Removes the 680px constraint */
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .pembukaan2 {
-        flex-direction: column; /* Stack principal photo and text */
-        text-align: center;
-    }
-    .kepsek-img {
-        height: 120px; /* Slightly smaller image */
-    }
-    aside {
-        width: 100%;
-        align-items: stretch; /* Make sidebar cards full width */
-    }
-    .info, .sosmed {
-        min-width: auto; /* Remove fixed 340px width */
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  .tombol-mode {
+    height: 40px;
+    width: 40px;
+  }
 
-    /* --- 5. SPOTLIGHT SECTION (Fixes the "Too Big" issue) --- */
-    .spotlight {
-        display: flex;
-        flex-direction: column; 
-        margin-left: 0; /* Reset negative margins */
-        margin-right: 0;
-        min-width: auto; /* Remove max-content constraint */
-        width: 100%;
-        height: auto;
-    }
-    .spotlight-left {
-        width: 100%;
-        padding: 40px 20px;
-        box-sizing: border-box;
-    }
-    .spotlight-right {
-        height: 300px; /* Give image area a fixed height on mobile */
-        width: 100%;
-    }
-    .spotlight-title {
-        font-size: 2em; /* Smaller title */
-    }
-    .spotlight-btn {
-        width: 100%; /* Button full width */
-        box-sizing: border-box;
-        text-align: center;
-    }
+  .banner p {
+    font-size: 2.6em;
+    margin: 0 20px;
+    padding-top: 120px;
+  }
 
-    /* --- 6. NEWS (BERITA) --- */
-    .berita-news {
-        flex-direction: column; /* Stack image and text */
-        max-width: 100%;
-    }
-    .gambar-berita {
-        width: 100%; /* Image full width */
-        height: auto;
-        margin-bottom: 15px;
-    }
-    .berita-box {
-        width: 100%; /* Remove fixed 500px */
-        box-sizing: border-box;
-    }
+  .banner .subtext {
+    font-size: 1.1em;
+    margin: -10px 20px;
+  }
 
-    /* --- 7. VIDEO SECTION --- */
-    .media .video-list {
-        display: flex;
-        flex-direction: column; /* Stack videos vertically */
-        gap: 20px;
-    }
-    .media .video-item iframe, 
-    .media .video-item img {
-        width: 100% !important; /* Force videos to fit screen width */
-        height: auto;
-        aspect-ratio: 16/9; /* Keep video ratio */
-    }
-    
-    /* --- 8. FOOTER & EXTRAS --- */
-    .lirik {
-        margin-left: 0; /* Reset negative margin on lyrics */
-        text-align: center;
-    }
-    .hymne-media, .mars-media {
-        position: static; /* Remove absolute positioning */
-        margin: 20px auto;
-        display: block;
-        width: 100%;
-    }
+  .container {
+    padding: 16px;
+    margin: 24px auto;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .profile-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .profile-content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .prof-subtitle,
+  .profile-content p {
+    text-align: center;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .welkom {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .info,
+  .sosmed {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .pembukaan2 {
+    flex-direction: column;
+  }
+
+  .social-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .owl-carousel .item img {
+    border-radius: 10px;
+  }
+
+  .berita {
+    padding: 24px 16px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .berita-news {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .gambar-berita {
+    width: 100%;
+  }
+
+  .news-heading {
+    font-size: 26px;
+  }
+
+  .news-heading::after {
+    width: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .spotlight {
+    margin-left: -20px;
+    margin-right: -23px;
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+
+  .spotlight-left {
+    padding: 48px 20px;
+  }
+
+  .spotlight-title {
+    font-size: 2rem;
+  }
+
+  .spotlight-desc {
+    max-width: 100%;
+  }
+
+  .spotlight-btn {
+    width: 100%;
+  }
+
+  .progress,
+  .slide-counter,
+  .arrows {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .arrows {
+    justify-content: flex-start;
+  }
+
+  .spotlight-right {
+    min-height: 260px;
+  }
+
+  .card-text {
+    padding: 14px;
+  }
+
+  .media .video-list {
+    gap: 12px;
+  }
+
+  .media .video-item {
+    flex: 0 0 260px;
+  }
+
+  .media .video-item iframe,
+  .media .video-item img {
+    width: 260px;
+    height: 146px;
+  }
+
+  /* Halaman Berita */
+  #berita {
+    margin-top: 120px;
+    padding: 16px;
+  }
+
+  .judul-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .berita-box {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  /* Hal Guru & Staff */
+  .header2 {
+    padding: 16px;
+    min-height: 100px;
+  }
+
+  .header2 .logo {
+    width: 70px;
+  }
+
+  .header2 h1 {
+    font-size: 20px;
+  }
+
+  .guru {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .title-daftar {
+    font-size: 28px;
+  }
+
+  .title-daftar::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 120px;
+  }
+
+  /* Kontak */
+  .contact-form {
+    padding: 20px;
+    margin: 0 8px 40px;
+  }
+
+  /* Visi Misi */
+  .visi .title::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 120px;
+  }
+
+  .visi-misi {
+    padding: 0 16px 40px;
+  }
+
+  .box-visimisi {
+    padding: 16px;
+  }
+
+  /* Sejarah */
+  .hal-sejarah .sejarah-container {
+    padding: 24px 16px;
+  }
+
+  .sejarah-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline li {
+    flex-direction: column;
+  }
+
+  .timeline li time {
+    min-width: 0;
+  }
+
+  /* Hymne & Mars */
+  .lirik {
+    margin-left: 0;
+  }
+
+  .hymne-media,
+  .mars-media {
+    position: static;
+    width: 100%;
+    margin: 16px auto 0;
+    display: block;
+  }
+
+  .illust2 {
+    display: none;
+  }
 }
+
+@media (max-width: 480px) {
+  .banner p {
+    font-size: 2.1em;
+    padding-top: 100px;
+  }
+
+  .banner .subtext {
+    font-size: 1em;
+  }
+
+  .profile-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .news-heading {
+    font-size: 22px;
+  }
+
+  .spotlight-title {
+    font-size: 1.7rem;
+  }
+
+  .media .video-item {
+    flex: 0 0 220px;
+  }
+
+  .media .video-item iframe,
+  .media .video-item img {
+    width: 220px;
+    height: 124px;
+  }
+}
+
