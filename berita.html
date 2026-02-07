@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAN 3 Bandung - Berita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css" id="theme-style">
+    <link rel="icon" type="image/x-icon" href="pics/logo sman3.png">
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <div class="brand">
+       <a href="index.html"><img class="logo" src="pics/logo sman3.png" alt="logo sman3"></a>
+        <div>
+            <h1>SMAN 3 Bandung</h1>
+       
+        <p>Knowledge is Power But Character Is more</p>
+        </div>
+    </div>
+  
+    <!--Nav bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a>
+            </li>
+            <li>
+                <a href="#">Profil</a>
+                <ul>
+                    <li><a href="sejarah.html">Sejarah</a></li>
+                    <li><a href="Visi-misi.html">Visi & Misi</a></li>
+                    <li><a href="guru.html">Guru & Staff</a></li>
+                    <li><a href="hymne-mars.html">Hymne & Mars</a></li>
+                </ul>
+            </li>
+            <li>
+            <a href="berita.html" class="aktip">Berita</a>
+            </li>
+            <li><a href="kontak.html" class="kontak">Kontak</a></li>
+            <button onclick="toggleTheme()" class="tombol-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 60q-74.92 0-127.46-52.54Q300-405.08 300-480q0-74.92 52.54-127.46Q405.08-660 480-660q74.92 0 127.46 52.54Q660-554.92 660-480q0 74.92-52.54 127.46Q554.92-300 480-300ZM200-450H50v-60h150v60Zm710 0H760v-60h150v60ZM450-760v-150h60v150h-60Zm0 710v-150h60v150h-60ZM262.92-656.92l-93.69-90.46 42.39-44.39 90.23 92.69-38.93 42.16Zm485.46 488.69-90.84-93.31 39.54-41.54 93.69 90.46-42.39 44.39Zm-91.46-528.85 90.46-93.69 44.39 42.39-92.69 90.23-42.16-38.93ZM168.23-211.62l93.31-90.84 40.77 39.54-90.08 94.07-44-42.77ZM480-480Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M594.23-648.08 488.46-753.85l105.77-105.76L700-753.85 594.23-648.08Zm200 120-65.77-65.77 65.77-65.76L860-593.85l-65.77 65.77ZM483-100q-79.77 0-149.61-30.27-69.85-30.27-121.85-82.27t-82.27-121.85Q99-404.23 99-484q0-131.38 80.12-234.04 80.11-102.65 207.19-134.65-11.08 96.31 19.84 186.77 30.93 90.46 99.62 159.15 68.69 68.69 159.15 99.62 90.46 30.92 186.77 19.84-31.38 127.08-134.35 207.19Q614.38-100 483-100Zm0-60q88 0 163-44t118-121q-86-8-163-43.69t-138-96.69q-61-61-97-137.81T323-766q-77 43-120.5 118.5T159-484q0 135 94.5 229.5T483-160Zm-20-305.38Z"/></svg>
+            </button>
+        </ul>
+    </nav>
+    </header>
+    
+    <main class="container" id="berita">
+    <div class="judul-container">
+        <h2 class="judul aktip2" id="judul-berlangsung">Kegiatan Akan Berlangsung</h2>
+        <h2 class="judul" id="judul-telah">Kegiatan Telah Berlangsung</h2>
+    </div>
+
+    <!--Akan Berlangsung -->
+    <div class="berita-section aktif" id="berita-akan">
+    <div class="berita-baris">
+        <div class="berita-box">
+        <div class="slider">
+            <div class="slides">
+            <img src="pics/mpls.jpg" alt="MPLS 1">
+            <img src="pics/mpls2.jpg" alt="MPLS 2">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h2>MPLS Angkatan 2028</h2>
+        <p class="diposting">Diposting: 8 Juli 2025</p>
+        <p>Masa Pengenalan Lingkungan Sekolah bagi siswa angkatan '28 akan dilaksanakan pada awal tahun pelajaran yaitu 10 Juli.</p>
+        <a href="https://www.instagram.com/p/DMF3Lz1huMz/?utm_source=ig_web_copy_link">Baca Selengkapnya</a>
+        </div>
+        
+        <div class="berita-box">
+            <div class="slider">
+            <div class="slides">
+            <img src="pics/Bakdes1.jpg" alt="Bakdes 1">
+            <img src="pics/bakdes2.jpg" alt="Bakdes 2">
+            <img src="pics/bakdes3.jpg" alt="Bakdes 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            </div>
+            <h2>Kegiatan Bakti Desa</h2>
+            <p class="diposting">Diposting: 5 Juni 2024</p>
+            <p>Siswa SMAN 3 Bandung berpartisipasi dalam Bakti Desa untuk membantu masyarakat dan belajar langsung di lingkungan desa.</p>
+            <a href="https://majalahsora.com/bakdes-sman-3-kota-bandung-berbagi-ratusan-siswa-rasakan-kehidupan-desa-sukaluyu-pangalengan/img-20240213-wa0026/">Baca Selengkapnya</a>
+        </div>
+        <div class="berita-box">
+            <div class="slider">
+                <div class="slides">
+                    <img src="pics/madja1.jpg" alt="Fesbud 25 1">
+                    <img src="pics/madja2.jpg" alt="Fesbud 25 2">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <h2>Festival Budaya 2025</h2>
+            <p class="diposting">Diposting: 12 April 2025</p>
+            <p>SMA Negeri 3 Bandung mengumumkan pelaksanaan Festifal Budaya tahun 2025 berjudul Ghawarnusa</p>
+            <a href="https://www.instagram.com/festivalbudaya25/">Baca Selengkapnya</a>
+        </div>
+        </div>
+    </div>
+
+  <!-- Bagian Telah Berlangsung -->
+  <div class="berita-section" id="berita-telah">
+    <div class="berita-baris">
+      <div class="berita-box">
+        <div class="slider">
+                <div class="slides">
+                    <img src="pics/17an.jpg" alt="Fesbud 25 1">
+                    <img src="pics/17an 2.png" alt="Fesbud 25 2">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        <h2>Lomba 17-an HUT RI ke-79</h2>
+        <p class="diposting">Diposting: 18 Agustus 2023</p>
+        <p>SMAN 3 Bandung melaksanakan upacara memperingati Hari Kemerdekaan Republik Indonesia ke-79.</p>
+        <a href="https://www.instagram.com/p/DNnyTqop_62/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Baca Selengkapnya</a>
+      </div>
+      <div class="berita-box">
+        <div class="slider">
+                <div class="slides">
+                    <img src="pics/batik1.png" alt="Fesbud 25 1">
+                    <img src="pics/batik2.png" alt="Fesbud 25 2">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        <h2>Hari Batik Nasional 2025</h2>
+        <p class="diposting">Diposting: 3 Oktober 2025</p>
+        <p>SMAN 3 Bandung memperingati Hari Batik Nasional dengan mengenakan batik dan mengadakan berbagai kegiatan budaya di sekolah.</p>
+        <a href="https://www.instagram.com/p/DPWJ9dpklGB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Baca Selengkapnya</a>
+      </div>
+      <div class="berita-box">
+        <div class="slider">
+                <div class="slides">
+                    <img src="pics/turbud1.jpg" alt="Fesbud 25 1">
+                    <img src="pics/turbud2.jpeg" alt="Fesbud 25 2">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        <h2>Tur Budaya 2024</h2>
+        <p class="diposting">Diposting: 20 April 2024</p>
+        <p>SMAN 3 mengadakan tur budaya menuju Bali untuk mengenal budaya lain sekaligus sebagai pelepasan dari tugas yang berat di SMAN 3 Bandung.</p>
+        <a href="https://jabar.tribunnews.com/2024/05/14/dikelola-siswa-sman-3-bandung-gelar-tur-budaya-ke-bali-sewa-pengawalan-polisi-dan-naik-pesawat">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+        <p>&copy; 2024 SMAN 3 Bandung. All rights reserved.</p>
+    </footer>
+<script src="sekrip.js"></script> <!--JS DIBANTU GPT, SISANYA SENDIRI-->
+</body>
+</html>
