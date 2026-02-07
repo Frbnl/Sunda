@@ -1,0 +1,118 @@
+/* Hal Guru & Staff */
+.darkmode{
+    .artikel2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #000000 37%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+}
+.header2 {
+  background: rgb(45, 45, 45);
+  color: white;
+  padding: 20px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.header2 .logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-right: 20px; 
+}
+
+.header2 h1 {
+  font-size: 28px;
+  text-align: left;
+  margin: 0;
+  flex: 1;
+}
+.title-daftar{
+    color: var(--text-white);
+  text-align: center;
+  font-size: 36px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.title-daftar::after{
+  content: "";
+  display: block;
+  width: 170px;
+  height: 5px;
+  position: absolute;
+  background: linear-gradient(to right, #2b6cb0, #4299e1);
+  margin: 0 auto 10px;
+  left: 15em;
+  right: 15em;
+}
+.guru{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+.guru-staff h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.artikel2 {
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.13);
+  border-radius: 10px;
+  border: solid 1px #b3b3b3;
+  text-align: center;
+  overflow: hidden;
+  color: var(--text-white); 
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+/* Overlay*/
+.artikel2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1) 37%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+
+.artikel2 * {
+  position: relative;
+  z-index: 2;
+}
+
+.artikel2 img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+.artikel2 img:hover {
+  transform: scale(1.15);
+}
+.artikel2 h3  {
+  text-align: center;
+  margin: 10px 0 5px;
+  color: var(--text-white); 
+}
+.artikel2 p {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-white); 
+}
+.artikel2 span {
+  font-weight: bold;
+  color: var(--text-white); 
+}

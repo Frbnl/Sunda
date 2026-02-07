@@ -1,0 +1,157 @@
+body{
+    background: repeating-linear-gradient(-45deg,
+        #e4e4e7 ,
+        #ffffff , /*kanan bawah*/
+        #0f0f0f ,
+        #2720a4 ); /*kiri atas*/
+    background-size: 100% 100%;
+    animation: gradient 14s ease infinite;
+    color: #ffffff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.header{
+    background: linear-gradient(to bottom, rgba(1, 8, 140, 0.099) 1%, rgba(27, 27, 27, 0.3) );
+    color: #f0f0f0;
+    border-bottom: solid 1px #2f2f2f;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.welkom{
+    background: rgba(40, 39, 39, 0.6);
+    border: solid 2px #444;
+}
+.welkom h2, .welkom p{
+    color: #ffffff;
+}
+.sambutan{
+    background: rgba(50, 50, 50, 0.6);
+    border: solid 1px #444;
+}
+
+.container .about .welkom .welkam_teks{
+    color: #f0f0f0;
+}
+.artikel{
+    background: rgba(50, 50, 50, 0.6);
+    border: solid 1px #444;
+}
+.info{
+    background: rgba(50, 50, 50, 0.6);
+    border: solid 1px #444;
+    color: #f0f0f0;
+}
+.sumber-kepsek{
+    font-size: 10px;
+    color: var(--abu);
+    margin-top: 10px;
+}
+aside ul{
+    color: #eaeaea;
+}
+.media .video-list{
+    background: rgba(41, 41, 41, 0.6);
+    border: solid 1px #444;
+}
+.berita-news{
+    background: rgba(50, 50, 50, 0.6);
+    border: solid 1px #444;
+}
+.sosmed a{
+    color: #eaeaea;
+}
+.sosmed{
+    background: rgba(41, 41, 41, 0.6);
+    border: solid 1px #444;
+}
+.artikel2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(19, 19, 19) 37%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+.artikel2{
+    color: white;
+    border: solid 1px #292929;
+    box-shadow: 0 1px 10px rgba(166, 166, 166, 0.2);
+}
+.berita-box{
+    background: rgba(41, 41, 41, 0.6);
+    border: solid 1px #444;
+}
+.contact-form {
+  background: rgba(41, 41, 41, 0.6);
+  border: solid 1px #444;
+
+}
+.contact-form label {
+  color: white;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.contact-form button:hover {
+  background: rgba(43, 108, 176, 1);
+  transform: translateY(-2px);
+}
+.box-visimisi {
+  background: #1a1a1a;
+  color: #f1f1f1;                              
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  transition: box-shadow 0.3s ease;
+}
+/*Sejarah*/
+.hal-sejarah h2{
+    font-family: 'mdserif';
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);    
+}
+.sejarah-hero {
+  border: solid 1px rgb(50, 50, 50);
+  background: rgba(33, 33, 33, 0.5);
+  box-shadow: 0 8px 30px rgba(224, 224, 224, 0.08);
+}
+.sejarah-hero .hero-inner h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Timeline */
+.timeline li {
+  border-radius: 10px;
+  border-left: 6px solid goldenrod;
+  background: rgba(49, 49, 49, 0.5);
+  box-shadow: 0 8px 30px rgba(224, 224, 224, 0.08);
+}
+.timeline li time {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.timeline .event h3 {
+  line-height: 0.1;
+  font-size: 18px;
+}
+.timeline .event p { 
+    margin: 0; 
+    color: rgb(209, 209, 209); 
+    font-size: 14px; 
+}

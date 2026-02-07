@@ -1,0 +1,163 @@
+@font-face {
+  font-family: playfair;
+  src: url(font/playfair.ttf)
+}
+@font-face {
+  font-family: manrope;
+  src: url(font/Manrope-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: proximanova;
+  src: url(font/Fontspring-DEMO-proximanova-bold.otf);
+}
+:root{
+  --text: rgb(0, 0, 0);
+  --textrev: rgb(255, 255, 255);
+  --text-blue: rgb(7, 28, 83);
+  --text2: rgb(33, 37, 41);
+  --bg-white: rgb(242, 241, 241);
+  --bg-Dblue: rgb(13, 0, 61);
+  --pure-neutral: #ffffff;
+  --semi-transparent: rgba(177, 177, 177, 0.438);
+  --border-soft: rgba(206, 206, 206, 0.7); 
+  --transparent: rgba(0,0,0,0);
+  --mute3: #767676;
+  --mute: #949494;
+  --mute2: #d9d9d9;
+}
+body{
+  font-family: playfair;
+  color: black;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+#video{
+  margin-top: -100px;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; 
+}
+header { 
+  background: var(--transparent);
+  padding: 20px;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.logo {
+  background: url("Medias/GoNusa_logo_white.png") no-repeat center/contain;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  height: 50px;
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 100px;
+  -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1)); 
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+}
+
+header h1 {
+  font-size: 20px;
+  text-align: left;
+}
+
+nav {
+  background: var(--transparent);
+  text-align: center;
+  gap: 50px;
+  color: black;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center; 
+  gap: 30px;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+  border-radius: 15px; 
+  color: black;
+}
+
+nav ul li a {
+  color: var(--textrev);
+  font-size: 16px;
+  padding: 8px 12px;
+  font-family: manrope;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 12px;
+  display: block;
+  transition: 0.3s
+}
+nav ul li a:hover {
+  background: rgba(2, 81, 145, 0.401);
+  border-radius: 15px;   
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+  color: rgb(0, 0, 0);
+    
+}
+nav ul li ul {
+  color: rgb(255, 255, 255);
+  display: none;
+  position: absolute;
+  background: rgba(43, 108, 176, 0.76);
+  backdrop-filter: blur(16px);
+  left: 0;
+  top: 35px;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+nav ul li ul li  {
+  margin: 0;
+  width: 150px;
+}
+nav ul li ul li a {
+  padding: 10px;
+  font-weight: normal;
+  color: var(--textrev);
+}
+nav ul li:hover ul {
+  display: block;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+nav ul li a.aktip {
+  background: rgba(43, 108, 176, 0.9);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.navbar.scrolled  {
+  background-color: rgba(184, 207, 234, 0.466);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: solid 1px var(--border-soft);
+  transition: 0.5s;
+  font-family: manrope;
+}
+
+.navbar:hover{
+  background-color: rgba(184, 207, 234, 0.466);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: solid 1px var(--border-soft);
+  transition: 0.5s;
+  font-family: manrope;
+  color: black;
+}
