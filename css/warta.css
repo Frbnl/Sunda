@@ -1,0 +1,223 @@
+@import url('babad.css');
+
+.warta-title {
+  text-shadow: 0 8px 20px rgba(18, 42, 91, 0.2);
+  letter-spacing: 0.7px;
+}
+
+.warta-hero {
+  --hero-base: linear-gradient(125deg, rgba(210, 230, 255, 0.24), rgba(10, 26, 56, 0.18));
+  --hero-fade: linear-gradient(
+    to bottom right,
+    rgba(7, 16, 34, 0.1) 6%,
+    rgba(9, 20, 42, 0.42) 52%,
+    rgba(8, 16, 30, 0.88) 100%
+  );
+  --mega-opacity: 0.62;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.warta-hero::after {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(118, 198, 255, 0.28), transparent 35%),
+    radial-gradient(circle at 86% 22%, rgba(255, 211, 105, 0.2), transparent 32%),
+    var(--hero-fade);
+}
+
+.warta-chip-row {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.warta-chip-row span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.1);
+  color: #eef7ff;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+}
+
+.warta-metrics {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.warta-metric-card {
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  color: var(--text-white);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.07));
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.warta-metric-value {
+  margin: 0;
+  font-family: playfair;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.warta-metric-label {
+  margin: 7px 0 0;
+  font-family: manrope;
+  font-size: 0.92rem;
+  color: #eef6ff;
+}
+
+.warta-values-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.warta-values-grid .babad-intro-panel {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.warta-values-grid .babad-intro-panel:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 211, 105, 0.55);
+}
+
+.warta-values-grid .babad-intro-panel p {
+  margin: 0;
+  color: var(--text-white);
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.warta-5w-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.warta-5w-card {
+  border-radius: 12px;
+  padding: 14px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  min-height: 112px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.warta-5w-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+}
+
+.warta-5w-card h4 {
+  margin: 0 0 8px;
+  color: #ffd369;
+  font-family: manrope;
+  font-size: 1.05rem;
+}
+
+.warta-5w-card p {
+  margin: 0;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.warta-types {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.warta-types .babad-card h3 {
+  color: #ffd369;
+}
+
+.warta-types .babad-card p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.warta-types .babad-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.warta-types .babad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
+}
+
+.warta-types .babad-card h4 {
+  margin: 14px 0 8px;
+  color: #ffe08c;
+  font-size: 1rem;
+  font-family: manrope;
+}
+
+.warta-analysis h3 {
+  margin-bottom: 14px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.warta-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.warta-table th,
+.warta-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-white);
+  vertical-align: top;
+}
+
+.warta-table th {
+  background: rgba(255, 211, 105, 0.16);
+  font-family: manrope;
+  letter-spacing: 0.2px;
+}
+
+.warta-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.warta-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+@media (max-width: 768px) {
+  .warta-metrics,
+  .warta-5w-grid,
+  .warta-values-grid,
+  .warta-types {
+    grid-template-columns: 1fr;
+  }
+
+  .warta-table {
+    min-width: 520px;
+  }
+
+  .warta-chip-row {
+    gap: 8px;
+  }
+
+  .warta-metric-value {
+    font-size: 1.75rem;
+  }
+
+  .title-pg-babad {
+    font-size: 2.5em;
+  }
+}

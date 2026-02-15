@@ -1,0 +1,124 @@
+﻿@import url('babad.css');
+
+.babad-hero {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+}
+
+.babad-hero::after {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 211, 105, 0.18), transparent 32%),
+    radial-gradient(circle at 82% 28%, rgba(149, 213, 255, 0.22), transparent 34%),
+    var(--hero-fade);
+}
+
+.hero-inner h2 {
+  letter-spacing: 0.4px;
+}
+
+.babad-hero-card {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.07));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sajak-intro {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sajak-intro-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  padding: 18px;
+  color: var(--text-white);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sajak-intro-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+.sajak-intro-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #ffd369;
+  font-family: playfair;
+}
+
+.sajak-intro-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.65;
+}
+
+.sajak-intro-list li + li {
+  margin-top: 8px;
+}
+
+.babad-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.babad-card h3 {
+  color: #ffd369;
+  margin-bottom: 8px;
+}
+
+.babad-list li strong {
+  color: #ffffff;
+}
+
+.video-container {
+  width: min(100%, 880px);
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+}
+
+.babad-story p {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #edf3ff;
+}
+
+.babad-story h3 {
+  color: #ffd369;
+  font-family: playfair;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 16px;
+}
+
+.darkmode .sajak-intro-card {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+  .sajak-intro,
+  .babad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title-pg-babad {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+
+  .babad-story p {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+}

@@ -1,0 +1,178 @@
+﻿@import url('babad.css');
+
+.aksara-page {
+  margin-top: 120px;
+  color: var(--text-white);
+}
+
+.aksara-hero {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(255, 212, 113, 0.2), transparent 28%),
+    radial-gradient(circle at 84% 22%, rgba(127, 217, 255, 0.2), transparent 32%),
+    linear-gradient(120deg, rgba(8, 18, 44, 0.88), rgba(5, 84, 135, 0.76)),
+    url('../img/megamendung.png') center/cover no-repeat;
+  border-radius: 16px;
+  padding: 54px 32px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.aksara-hero h2 {
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-family: playfair;
+}
+
+.aksara-hero h1 {
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-family: playfair;
+  line-height: 1.2;
+}
+
+.aksara-hero p {
+  margin-top: 10px;
+  max-width: 720px;
+  font-family: manrope;
+  line-height: 1.7;
+  color: #f2f7ff;
+}
+
+.aksara-section,
+.aksara-gallery,
+.tugas-section {
+  margin-top: 28px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.aksara-section h2,
+.aksara-gallery h2,
+.tugas-section h2 {
+  margin: 0 0 12px;
+  font-family: playfair;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+
+.aksara-section p {
+  margin: 0;
+  font-family: manrope;
+  line-height: 1.8;
+  color: #f2f7ff;
+}
+
+.aksara-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.aksara-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aksara-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+.aksara-card img,
+.tugas-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: #ffffff;
+  display: block;
+}
+
+.aksara-card h3 {
+  margin: 0;
+  padding: 12px;
+  font-family: manrope;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.tugas-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tugas-card {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tugas-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+.tugas-card figcaption {
+  padding: 12px;
+  font-family: manrope;
+  font-size: 0.95rem;
+  color: #f0f6ff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.tugas-card img {
+  height: 360px;
+}
+
+.tugas-note {
+  margin-top: 14px;
+  font-family: manrope;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .aksara-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .aksara-page {
+    margin-top: 96px;
+  }
+
+  .aksara-hero {
+    padding: 34px 18px;
+  }
+
+  .tugas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aksara-card img {
+    height: 260px;
+  }
+
+  .tugas-card img {
+    height: 260px;
+  }
+}

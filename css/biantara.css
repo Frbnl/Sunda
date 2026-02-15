@@ -1,0 +1,246 @@
+﻿@import url('babad.css');
+
+:root {
+  --biantara-accent: #ffd369;
+  --biantara-sky: #8ad6ff;
+  --biantara-ink: #0b2c5b;
+}
+
+.biantara-title {
+  letter-spacing: 1px;
+  text-shadow: 0 8px 24px rgba(18, 42, 91, 0.28);
+}
+
+.biantara-hero {
+  --hero-base: linear-gradient(125deg, rgba(210, 230, 255, 0.24), rgba(10, 26, 56, 0.15));
+  --hero-fade: linear-gradient(
+    to bottom right,
+    rgba(7, 16, 34, 0.1) 6%,
+    rgba(9, 20, 42, 0.45) 52%,
+    rgba(8, 16, 30, 0.88) 100%
+  );
+  --mega-opacity: 0.62;
+  border-color: rgba(255, 255, 255, 0.36);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+}
+
+.biantara-hero::before {
+  background: url('../img/megamendung.jpeg') center/cover no-repeat;
+}
+
+.biantara-hero::after {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(138, 214, 255, 0.28), transparent 35%),
+    radial-gradient(circle at 85% 25%, rgba(255, 211, 105, 0.2), transparent 30%),
+    var(--hero-fade);
+}
+
+.biantara-hero .babad-hero-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(3px);
+}
+
+.biantara-chip-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.biantara-chip-row span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f7fbff;
+  font-family: manrope;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.biantara-metrics {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric-card {
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: var(--text-white);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+}
+
+.metric-value {
+  margin: 0;
+  font-family: playfair;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.metric-label {
+  margin: 8px 0 0;
+  font-family: manrope;
+  font-size: 0.92rem;
+  color: #eef6ff;
+}
+
+.biantara-container .babad-intro-content {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.biantara-container .babad-intro-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.biantara-container .babad-intro-panel::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 211, 105, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.biantara-container .babad-card h3 {
+  color: #ffd369;
+  margin-bottom: 8px;
+}
+
+.example-kicker {
+  margin: 0 0 8px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 211, 105, 0.35);
+  background: rgba(255, 211, 105, 0.14);
+  color: #ffe08c;
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.biantara-example {
+  background:
+    linear-gradient(160deg, rgba(7, 18, 37, 0.75), rgba(7, 18, 37, 0.55)),
+    radial-gradient(circle at top right, rgba(138, 214, 255, 0.22), transparent 40%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.biantara-example p {
+  text-align: left;
+  line-height: 1.8;
+}
+
+.biantara-video {
+  background:
+    linear-gradient(160deg, rgba(11, 20, 38, 0.78), rgba(8, 16, 32, 0.6)),
+    radial-gradient(circle at top left, rgba(255, 211, 105, 0.18), transparent 35%);
+}
+
+.biantara-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.biantara-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.biantara-checklist {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.checklist-card {
+  border-radius: 14px;
+  padding: 18px;
+  color: var(--text-white);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checklist-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
+}
+
+.checklist-card h3 {
+  margin: 0 0 10px;
+  font-family: playfair;
+  color: #ffd369;
+}
+
+.biantara-container .babad-timeline {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.biantara-container .babad-quote {
+  border-left: 0;
+  border-top: 4px solid var(--biantara-accent);
+  text-align: center;
+  font-size: 1.08rem;
+  background: linear-gradient(145deg, rgba(255, 211, 105, 0.12), rgba(255, 255, 255, 0.05));
+}
+
+.darkmode .biantara-hero {
+  --hero-base: linear-gradient(120deg, rgba(10, 14, 24, 0.72), rgba(6, 10, 17, 0.46));
+  --hero-fade: linear-gradient(
+    to bottom right,
+    rgba(5, 7, 10, 0.26) 8%,
+    rgba(5, 7, 10, 0.6) 46%,
+    rgba(5, 7, 10, 0.95) 100%
+  );
+  --mega-opacity: 0.45;
+}
+
+@media (max-width: 768px) {
+  .biantara-metrics,
+  .biantara-checklist,
+  .biantara-container .babad-intro-content,
+  .biantara-container .babad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 1.8rem;
+  }
+
+  .biantara-chip-row {
+    gap: 8px;
+  }
+
+  .title-pg-babad {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+}
