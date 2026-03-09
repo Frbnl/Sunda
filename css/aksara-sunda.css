@@ -2,7 +2,7 @@
 
 .aksara-page {
   margin-top: 120px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
 }
 
 .aksara-hero {
@@ -69,7 +69,7 @@
   margin: 0;
   font-family: manrope;
   line-height: 1.8;
-  color: #f2f7ff;
+  color: var(--kelas10-muted);
 }
 
 .aksara-grid {
@@ -105,7 +105,7 @@
   padding: 12px;
   font-family: manrope;
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--kelas10-text);
 }
 
 .tugas-grid {
@@ -134,8 +134,8 @@
   padding: 12px;
   font-family: manrope;
   font-size: 0.95rem;
-  color: #f0f6ff;
-  background: rgba(0, 0, 0, 0.35);
+  color: var(--kelas10-text);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .tugas-card img {
@@ -146,6 +146,27 @@
   margin-top: 14px;
   font-family: manrope;
   font-size: 0.95rem;
+  color: var(--kelas10-muted);
+}
+
+.darkmode .aksara-page {
+  color: var(--kelas10-text);
+}
+
+.darkmode .aksara-section p {
+  color: #f2f7ff;
+}
+
+.darkmode .aksara-card h3 {
+  color: #ffffff;
+}
+
+.darkmode .tugas-card figcaption {
+  color: #f0f6ff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.darkmode .tugas-note {
   color: rgba(255, 255, 255, 0.85);
 }
 

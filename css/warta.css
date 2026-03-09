@@ -77,6 +77,8 @@
 }
 
 .warta-values-grid .babad-intro-panel {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(18, 42, 91, 0.15);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -85,11 +87,30 @@
   border-color: rgba(255, 211, 105, 0.55);
 }
 
+.warta-values-grid .babad-intro-panel h4 {
+  color: #132545;
+}
+
 .warta-values-grid .babad-intro-panel p {
   margin: 0;
-  color: var(--text-white);
-  opacity: 0.85;
+  color: #2f4369;
+  opacity: 1;
   font-size: 0.95rem;
+}
+
+.warta-user-text.babad-story {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.26));
+  border: 1px solid rgba(18, 42, 91, 0.14);
+}
+
+.warta-user-text .babad-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(18, 42, 91, 0.14);
+  color: #1a2d4e;
+}
+
+.warta-user-text .babad-card p {
+  color: #1a2d4e;
 }
 
 .warta-5w-grid {
@@ -195,6 +216,35 @@
 
 .warta-table tbody tr:hover {
   background: rgba(255, 255, 255, 0.07);
+}
+
+.darkmode .warta-values-grid .babad-intro-panel {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.darkmode .warta-values-grid .babad-intro-panel h4 {
+  color: var(--text-white);
+}
+
+.darkmode .warta-values-grid .babad-intro-panel p {
+  color: var(--text-white);
+  opacity: 0.85;
+}
+
+.darkmode .warta-user-text.babad-story {
+  background: linear-gradient(155deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.28));
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.darkmode .warta-user-text .babad-card {
+  background: var(--kelas10-surface);
+  border-color: var(--kelas10-border);
+  color: var(--text-white);
+}
+
+.darkmode .warta-user-text .babad-card p {
+  color: var(--text-white);
 }
 
 @media (max-width: 768px) {

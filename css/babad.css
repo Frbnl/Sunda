@@ -1,10 +1,16 @@
 ﻿/* --- Shared Style: Kelas 10 Pages --- */
 :root {
-  --kelas10-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-  --kelas10-border: rgba(255, 255, 255, 0.24);
+  --kelas10-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.48));
+  --kelas10-border: rgba(18, 42, 91, 0.16);
   --kelas10-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
   --kelas10-accent: #ffd166;
   --kelas10-accent-2: #7fd9ff;
+  --kelas10-text: #1a2d4e;
+  --kelas10-muted: #2f4369;
+  --kelas10-panel: rgba(255, 255, 255, 0.58);
+  --kelas10-story: linear-gradient(155deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.34));
+  --kelas10-timeline-item: rgba(255, 255, 255, 0.58);
+  --kelas10-glossary-bg: rgba(255, 255, 255, 0.48);
 }
 
 .title-pg-babad {
@@ -143,7 +149,7 @@
 
 .babad-intro {
   margin-top: 28px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
 }
 
 .babad-intro-box {
@@ -151,14 +157,14 @@
   border: 1px solid var(--kelas10-border);
   border-radius: 14px;
   padding: 22px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
 .babad-intro-head {
   padding-bottom: 14px;
   margin-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(18, 42, 91, 0.14);
 }
 
 .babad-intro-kicker {
@@ -188,8 +194,8 @@
 }
 
 .babad-intro-panel {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--kelas10-panel);
+  border: 1px solid var(--kelas10-border);
   border-radius: 12px;
   padding: 14px;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -244,7 +250,7 @@
   border: 1px solid var(--kelas10-border);
   border-radius: 14px;
   padding: 18px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
@@ -274,9 +280,9 @@
   margin-top: 32px;
   padding: 22px;
   border-radius: 14px;
-  background: linear-gradient(155deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.28));
-  color: var(--text-white);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--kelas10-story);
+  color: var(--kelas10-text);
+  border: 1px solid var(--kelas10-border);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
 }
 
@@ -294,9 +300,9 @@
   margin-top: 28px;
   padding: 22px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--kelas10-border);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05));
-  color: var(--text-white);
+  color: var(--kelas10-text);
 }
 
 .babad-timeline h3 {
@@ -317,8 +323,8 @@
   padding: 10px 12px 10px 46px;
   border-radius: 12px;
   position: relative;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--kelas10-timeline-item);
+  border: 1px solid var(--kelas10-border);
 }
 
 .babad-timeline li::before {
@@ -340,7 +346,7 @@
 
 .babad-timeline span {
   font-weight: 700;
-  color: #ffdc7e;
+  color: #a56f00;
   margin-right: 6px;
 }
 
@@ -349,7 +355,7 @@
   padding: 22px;
   border-left: 6px solid var(--kelas10-accent);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
-  color: var(--text-white);
+  color: var(--kelas10-text);
   border-radius: 12px;
   font-style: italic;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
@@ -357,7 +363,7 @@
 
 .babad-glossary {
   margin-top: 28px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
 }
 
 .babad-glossary-grid {
@@ -368,14 +374,25 @@
 }
 
 .babad-glossary-grid div {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--kelas10-glossary-bg);
   border-radius: 12px;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--kelas10-border);
 }
 
 .babad-glossary-grid h4 {
   margin: 0 0 6px;
+}
+
+.darkmode {
+  --kelas10-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  --kelas10-border: rgba(255, 255, 255, 0.24);
+  --kelas10-text: #eceff6;
+  --kelas10-muted: #d9e4ff;
+  --kelas10-panel: rgba(0, 0, 0, 0.2);
+  --kelas10-story: linear-gradient(155deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.28));
+  --kelas10-timeline-item: rgba(0, 0, 0, 0.2);
+  --kelas10-glossary-bg: rgba(255, 255, 255, 0.12);
 }
 
 .darkmode .babad-hero {
@@ -395,6 +412,14 @@
 .darkmode .babad-timeline,
 .darkmode .babad-quote {
   border-color: rgba(255, 255, 255, 0.18);
+}
+
+.darkmode .babad-intro-head {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.darkmode .babad-timeline span {
+  color: #ffdc7e;
 }
 
 @keyframes section-rise {

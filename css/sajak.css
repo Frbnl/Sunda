@@ -33,7 +33,7 @@
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 14px;
   padding: 18px;
-  color: var(--text-white);
+  color: var(--kelas10-text);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -70,7 +70,7 @@
 }
 
 .babad-list li strong {
-  color: #ffffff;
+  color: var(--kelas10-text);
 }
 
 .video-container {
@@ -80,7 +80,7 @@
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .video-container iframe {
@@ -93,7 +93,7 @@
 .babad-story p {
   font-size: 1.08rem;
   line-height: 1.85;
-  color: #edf3ff;
+  color: var(--kelas10-muted);
 }
 
 .babad-story h3 {
@@ -105,6 +105,18 @@
 
 .darkmode .sajak-intro-card {
   border-color: rgba(255, 255, 255, 0.18);
+}
+
+.darkmode .babad-list li strong {
+  color: #ffffff;
+}
+
+.darkmode .video-container {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.darkmode .babad-story p {
+  color: #edf3ff;
 }
 
 @media (max-width: 768px) {
