@@ -1,0 +1,205 @@
+/* ==========================================================
+   SISINDIRAN — Kelas XI  ·  Extends babad.css
+   Teal / emerald accent theme
+   ========================================================== */
+
+/* --- Title --- */
+.sind-title {
+  background: linear-gradient(135deg, #10b981, #06b6d4, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sind-title::after {
+  background: linear-gradient(to right, rgba(6,182,212,.12), #10b981, rgba(59,130,246,.12));
+}
+
+/* --- Hero --- */
+.sind-hero {
+  --hero-base: linear-gradient(120deg, rgba(16,185,129,.45), rgba(6,95,70,.22));
+  --hero-fade: linear-gradient(to bottom right, rgba(5,25,15,.04) 6%, rgba(5,25,15,.35) 48%, rgba(5,25,15,.88) 100%);
+  --mega-opacity: .58;
+}
+.darkmode .sind-hero {
+  --hero-base: linear-gradient(120deg, rgba(6,95,70,.72), rgba(2,15,10,.5));
+  --hero-fade: linear-gradient(to bottom right, rgba(2,15,10,.2) 6%, rgba(2,15,10,.6) 48%, rgba(2,15,10,.95) 100%);
+}
+
+/* --- Chip Row --- */
+.sind-chip-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+}
+.sind-chip-row span {
+  padding: 4px 14px; border-radius: 999px; font-size: .75rem; font-weight: 600;
+  letter-spacing: .5px; color: #fff;
+  background: linear-gradient(135deg, rgba(16,185,129,.55), rgba(6,182,212,.45));
+  border: 1px solid rgba(16,185,129,.4); backdrop-filter: blur(4px);
+}
+
+/* --- Metrics --- */
+.sind-metrics {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 28px;
+}
+.sind-metric-card {
+  background: var(--kelas10-surface); border: 1px solid var(--kelas10-border);
+  border-radius: 14px; padding: 22px 18px; text-align: center;
+  box-shadow: 0 10px 26px rgba(0,0,0,.2);
+  transition: transform .22s ease, border-color .22s ease;
+}
+.sind-metric-card:hover { transform: translateY(-4px); border-color: rgba(16,185,129,.45); }
+.sind-metric-value {
+  margin: 0; font-size: clamp(2rem,5vw,3rem); font-weight: 800; font-family: playfair;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+}
+.sind-metric-label { margin: 8px 0 0; font-size: .85rem; color: var(--kelas10-muted); font-weight: 500; }
+
+/* --- Diagram --- */
+.sind-diagram-section { margin-top: 28px; }
+.sind-diagram-intro { margin-bottom: 20px; line-height: 1.72; }
+.sind-diagram {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.sind-diagram-col { border-radius: 12px; overflow: hidden; border: 1px solid var(--kelas10-border); }
+.sind-diagram-label {
+  text-align: center; padding: 8px; font-size: .72rem; font-weight: 800;
+  letter-spacing: 2px; color: #fff;
+}
+.sind-col-sampiran .sind-diagram-label { background: linear-gradient(90deg, #64748b, #475569); }
+.sind-col-eusi .sind-diagram-label { background: linear-gradient(90deg, #10b981, #059669); }
+.sind-diagram-row {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+  border-top: 1px solid var(--kelas10-border); background: var(--kelas10-panel);
+}
+.sind-line-num {
+  width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font-size: .78rem; font-weight: 700; color: #fff; background: var(--kelas10-accent); flex-shrink: 0;
+}
+.sind-col-eusi .sind-line-num { background: #10b981; }
+.sind-line-bar { flex: 1; font-size: .82rem; line-height: 1.5; color: var(--kelas10-muted); }
+.sind-rima {
+  display: inline-block; padding: 1px 8px; border-radius: 4px;
+  font-size: .72rem; font-weight: 700; margin-right: 6px; margin-bottom: 4px;
+}
+.rima-a { background: rgba(16,185,129,.15); color: #059669; border: 1px solid rgba(16,185,129,.35); }
+.rima-b { background: rgba(6,182,212,.15); color: #0891b2; border: 1px solid rgba(6,182,212,.3); }
+.darkmode .rima-a { color: #34d399; background: rgba(16,185,129,.12); }
+.darkmode .rima-b { color: #67e8f9; background: rgba(6,182,212,.12); }
+
+/* --- 3 Types Grid --- */
+.sind-types-grid { grid-template-columns: repeat(3,1fr); }
+.sind-type-card { position: relative; padding-top: 40px !important; overflow: hidden; }
+.sind-badge {
+  position: absolute; top: 0; left: 0; right: 0; text-align: center;
+  padding: 5px 0; font-size: .72rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #fff;
+}
+.sind-badge-paparikan  { background: linear-gradient(90deg, #10b981, #059669); }
+.sind-badge-rarakitan  { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.sind-badge-wawangsalan{ background: linear-gradient(90deg, #6366f1, #4f46e5); }
+.sind-type-card h3 { margin: 0 0 8px; font-size: 1.12rem; font-family: playfair; }
+.sind-type-card p { font-size: .875rem; line-height: 1.62; margin: 0 0 12px; }
+
+/* --- Conto Box --- */
+.sind-conto-box {
+  background: linear-gradient(135deg, rgba(16,185,129,.08), rgba(6,182,212,.06));
+  border: 1px solid rgba(16,185,129,.25); border-radius: 10px; padding: 12px 14px;
+  margin-top: 8px;
+}
+.sind-conto-label {
+  margin: 0 0 6px; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px; color: #10b981;
+}
+.sind-conto-text { margin: 0; font-size: .88rem; line-height: 1.8; color: var(--kelas10-text); }
+.sind-conto-jawab {
+  margin: 8px 0 0; font-size: .78rem; color: var(--kelas10-muted);
+  padding: 6px 10px; background: rgba(16,185,129,.06); border-radius: 6px;
+}
+.rima-tag-a, .rima-tag-b {
+  font-style: normal; font-size: .72rem; font-weight: 700;
+  padding: 1px 6px; border-radius: 3px; margin-left: 4px;
+}
+.rima-tag-a { background: rgba(16,185,129,.15); color: #059669; }
+.rima-tag-b { background: rgba(6,182,212,.15); color: #0891b2; }
+
+/* --- Table --- */
+.sind-table-section { margin-top: 28px; }
+.table-wrap { overflow-x: auto; margin-top: 16px; border-radius: 12px; }
+.sind-table {
+  width: 100%; border-collapse: collapse; font-size: .9rem; color: var(--kelas10-text);
+}
+.sind-table thead tr { background: linear-gradient(135deg, rgba(16,185,129,.3), rgba(6,182,212,.2)); }
+.sind-table th {
+  padding: 12px 16px; text-align: left; font-weight: 700; font-size: .82rem;
+  letter-spacing: .5px; color: var(--kelas10-text); border-bottom: 2px solid rgba(16,185,129,.3);
+}
+.sind-table td { padding: 11px 16px; border-bottom: 1px solid var(--kelas10-border); line-height: 1.55; }
+.sind-table tbody tr:hover { background: rgba(16,185,129,.06); }
+.sind-table tbody tr:last-child td { border-bottom: none; }
+
+/* --- Fungsi Grid --- */
+.sind-fungsi { margin-top: 28px; }
+.sind-fungsi-grid { grid-template-columns: repeat(2,1fr); }
+
+/* --- Tugas / Video Placeholder --- */
+.sind-tugas-section { margin-top: 28px; }
+.sind-tugas-title { font-family: playfair; font-size: clamp(1.2rem,2.5vw,1.55rem); margin-bottom: 6px; }
+.sind-tugas-desc { margin-bottom: 20px; line-height: 1.7; color: var(--kelas10-muted); }
+.sind-video-placeholder {
+  width: 100%; aspect-ratio: 16/9; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(16,185,129,.12), rgba(6,182,212,.08), rgba(59,130,246,.07));
+  border: 2px dashed rgba(16,185,129,.4); display: grid; place-items: center;
+  position: relative; overflow: hidden; transition: border-color .3s ease, background .3s ease;
+}
+.sind-video-placeholder::before {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(16,185,129,.03) 0px, rgba(16,185,129,.03) 1px, transparent 1px, transparent 32px);
+}
+.sind-video-placeholder:hover {
+  border-color: rgba(16,185,129,.7);
+  background: linear-gradient(135deg, rgba(16,185,129,.16), rgba(6,182,212,.12), rgba(59,130,246,.1));
+}
+.sind-video-inner {
+  position: relative; z-index: 1; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.sind-video-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(16,185,129,.25), rgba(6,182,212,.2));
+  border: 2px solid rgba(16,185,129,.4); display: grid; place-items: center;
+  color: rgba(16,185,129,.8); animation: sind-pulse 2.5s infinite ease-in-out;
+}
+@keyframes sind-pulse {
+  0%,100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(16,185,129,.3); }
+  50%     { transform: scale(1.06); box-shadow: 0 0 0 12px rgba(16,185,129,0); }
+}
+.sind-video-label { margin: 0; font-size: 1rem; font-weight: 700; color: var(--kelas10-text); }
+.sind-video-sublabel { margin: 0; font-size: .82rem; color: var(--kelas10-muted); }
+.sind-video-badge {
+  padding: 4px 14px; border-radius: 999px; font-size: .72rem; font-weight: 700;
+  letter-spacing: .5px; color: #fff; background: linear-gradient(135deg, #10b981, #06b6d4); margin-top: 4px;
+}
+.sind-tugas-note { margin-top: 14px; font-size: .82rem; color: var(--kelas10-muted); font-style: italic; }
+.sind-tugas-note code {
+  background: rgba(16,185,129,.12); padding: 2px 6px; border-radius: 4px;
+  font-style: normal; color: #10b981; font-size: .8rem;
+}
+
+/* --- Darkmode --- */
+.darkmode .sind-metric-card { border-color: rgba(255,255,255,.14); }
+.darkmode .sind-conto-box { background: linear-gradient(135deg, rgba(16,185,129,.12), rgba(6,182,212,.08)); border-color: rgba(16,185,129,.3); }
+.darkmode .sind-conto-text { color: #e2e8f0; }
+.darkmode .sind-table thead tr { background: linear-gradient(135deg, rgba(16,185,129,.2), rgba(6,182,212,.15)); }
+.darkmode .sind-table td, .darkmode .sind-table th { border-color: rgba(255,255,255,.1); color: #e2e8f0; }
+.darkmode .sind-video-placeholder { background: linear-gradient(135deg, rgba(16,185,129,.1), rgba(6,182,212,.08), rgba(59,130,246,.06)); }
+.darkmode .sind-diagram-col { border-color: rgba(255,255,255,.12); }
+.darkmode .sind-diagram-row { border-color: rgba(255,255,255,.08); background: rgba(255,255,255,.04); }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) { .sind-types-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) {
+  .sind-metrics { grid-template-columns: repeat(3,1fr); }
+  .sind-types-grid, .sind-diagram, .sind-fungsi-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .sind-metrics { grid-template-columns: 1fr; } }

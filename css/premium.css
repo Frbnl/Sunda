@@ -1,0 +1,315 @@
+/* ==========================================================
+   PREMIUM WEB DESIGN OVERHAUL - ADAPTIVE VERSION
+   ========================================================== */
+
+/* 1. Dynamic Variables */
+:root {
+  /* Default: LIGHT MODE */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 15px;
+  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  --glass-inner-glow: inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  
+  --premium-accent: #3b82f6;
+  --premium-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+  --sunda-gradient: linear-gradient(135deg, #fbbf24, #d97706);
+  
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --bg-light: #f8fafc;
+}
+
+/* 2. DARK MODE OVERRIDES */
+body.darkmode {
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+  --glass-inner-glow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --bg-light: #0a0c10;
+}
+
+/* 3. Global Styles */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 4. Header & Navbar Consistency */
+header {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--glass-shadow) !important;
+  transition: all 0.4s ease;
+  
+  /* Alignment Fixes */
+  height: 70px !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+}
+
+.navbar, .navbar ul, .navbar ul li {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar ul li {
+  margin: 0 10px !important;
+  position: relative !important;
+}
+
+.navbar ul li a {
+  padding: 0 16px !important;
+  height: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Ensure dropdowns are not flex-centered vertically like the parent */
+.navbar ul li ul {
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  flex-direction: column !important;
+  height: auto !important;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  min-width: 180px !important;
+}
+
+.navbar ul li:hover > ul {
+  display: flex !important;
+}
+
+.navbar ul li ul li {
+  height: auto !important;
+  width: 100% !important;
+}
+
+.navbar ul li ul li a {
+  padding: 12px 20px !important;
+  height: auto !important;
+}
+
+header h1 {
+  color: var(--text-primary) !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.brand {
+  display: flex !important;
+  align-items: center !important;
+  line-height: normal !important;
+}
+
+.brand div p {
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* 5. Glow Orbs */
+.bg-container {
+  background: var(--bg-light);
+  z-index: -999;
+}
+
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.1; /* Very subtle in light mode */
+  z-index: -2;
+  pointer-events: none;
+  animation: floatOrb 25s infinite alternate ease-in-out;
+}
+
+body.darkmode .glow-orb {
+  opacity: 0.25;
+}
+
+.orb-1 {
+  top: -10%;
+  left: -5%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, #6366f166 0%, transparent 70%);
+}
+
+.orb-2 {
+  bottom: -5%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #a855f744 0%, transparent 70%);
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, 15%) scale(1.1); }
+}
+
+/* 6. Enhanced Glassmorphism Classes */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inner-glow);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.3), var(--glass-inner-glow);
+}
+
+body.darkmode .card-lift:hover {
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7), var(--glass-inner-glow);
+}
+
+/* 7. Profile Box Refinement */
+.profile-box.glass-card {
+  padding: 3rem !important;
+  margin: 4rem auto !important;
+  max-width: 1100px;
+}
+
+.profile-meta-card.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.25rem !important;
+  border-radius: 16px !important;
+}
+
+/* 8. Ceuk Hero / News Sections */
+.ceuk-hero-main.glass-card {
+  padding: 2.5rem;
+}
+
+.ceuk-hero-card.glass-card, 
+.ceuk-subbox.glass-card {
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.berita-news.glass-card {
+  padding: 2rem !important;
+  margin: 3rem auto !important;
+  display: flex !important;
+  gap: 2.5rem !important;
+  align-items: center;
+}
+
+/* 9. Shortcut Bento Grid */
+.shortcut-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 1.5rem;
+}
+
+.shortcut-item {
+  color: white !important;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.shortcut-item .shortcut-content {
+  z-index: 2;
+}
+
+.shortcut-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.shortcut-item p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  opacity: 0.95;
+  color: #ffffff;
+}
+
+/* 10. Buttons & Links */
+.navbar ul li a:hover, 
+.navbar ul li a.aktip {
+  background: var(--premium-gradient) !important;
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+  color: white !important;
+}
+/* 11. Responsive Grid */
+.box-1x1 { grid-column: span 1; grid-row: span 1; }
+.box-1x2 { grid-column: span 1; grid-row: span 2; }
+.box-2x1 { grid-column: span 2; grid-row: span 1; }
+.box-2x2 { grid-column: span 2; grid-row: span 2; }
+
+@media (max-width: 992px) {
+  .shortcut-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .shortcut-grid { grid-template-columns: repeat(2, 1fr); }
+  .box-2x2, .box-2x1 { grid-column: span 2; }
+}
+
+@media (max-width: 480px) {
+  .shortcut-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .box-1x1, .box-1x2, .box-2x1, .box-2x2 { grid-column: span 1 !important; grid-row: span 1 !important; }
+}
+
+/* 12. Theme Toggle Icon */
+.theme-btn-icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 8px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease;
+  width: 38px;
+  height: 38px;
+}
+
+.theme-btn-icon:hover {
+  background: var(--premium-gradient) !important;
+  color: white !important;
+  transform: rotate(15deg) scale(1.1);
+}
+
+.theme-btn-icon svg {
+  display: block;
+}

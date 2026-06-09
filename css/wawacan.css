@@ -1,0 +1,157 @@
+/* ==========================================================
+   WAWACAN — Kelas XI  ·  Extends babad.css
+   Purple / gold accent theme
+   ========================================================== */
+
+/* --- Title --- */
+.wawa-title {
+  background: linear-gradient(135deg, #f59e0b, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.wawa-title::after {
+  background: linear-gradient(to right, rgba(168,85,247,.12), #f59e0b, rgba(99,102,241,.12));
+}
+
+/* --- Hero --- */
+.wawa-hero {
+  --hero-base: linear-gradient(120deg, rgba(100,60,180,.55), rgba(20,10,40,.22));
+  --hero-fade: linear-gradient(to bottom right, rgba(10,5,25,.04) 6%, rgba(10,5,25,.35) 48%, rgba(10,5,25,.88) 100%);
+  --mega-opacity: .62;
+}
+.darkmode .wawa-hero {
+  --hero-base: linear-gradient(120deg, rgba(60,20,120,.72), rgba(5,2,15,.5));
+  --hero-fade: linear-gradient(to bottom right, rgba(5,2,15,.2) 6%, rgba(5,2,15,.6) 48%, rgba(5,2,15,.95) 100%);
+}
+
+/* --- Chip Row --- */
+.wawa-chip-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+}
+.wawa-chip-row span {
+  padding: 4px 14px; border-radius: 999px; font-size: .75rem; font-weight: 600;
+  letter-spacing: .5px; color: #fff;
+  background: linear-gradient(135deg, rgba(168,85,247,.55), rgba(99,102,241,.45));
+  border: 1px solid rgba(168,85,247,.4); backdrop-filter: blur(4px);
+}
+
+/* --- Metrics --- */
+.wawa-metrics {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 28px;
+}
+.wawa-metric-card {
+  background: var(--kelas10-surface); border: 1px solid var(--kelas10-border);
+  border-radius: 14px; padding: 22px 18px; text-align: center;
+  box-shadow: 0 10px 26px rgba(0,0,0,.2);
+  transition: transform .22s ease, border-color .22s ease;
+}
+.wawa-metric-card:hover { transform: translateY(-4px); border-color: rgba(168,85,247,.45); }
+.wawa-metric-value {
+  margin: 0; font-size: clamp(2rem,5vw,3rem); font-weight: 800; font-family: playfair;
+  background: linear-gradient(135deg, #f59e0b, #a855f7);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+}
+.wawa-metric-label { margin: 8px 0 0; font-size: .85rem; color: var(--kelas10-muted); font-weight: 500; }
+
+/* --- Pupuh Grid --- */
+.wawa-pupuh-section { margin-top: 28px; }
+.wawa-pupuh-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 16px;
+}
+.wawa-pupuh-card {
+  background: var(--kelas10-panel); border: 1px solid var(--kelas10-border);
+  border-radius: 12px; padding: 16px; position: relative; overflow: hidden;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.wawa-pupuh-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(168,85,247,.06), transparent); z-index: 0;
+}
+.wawa-pupuh-card > * { position: relative; z-index: 1; }
+.wawa-pupuh-card:hover {
+  transform: translateY(-3px); border-color: rgba(168,85,247,.4);
+  box-shadow: 0 10px 24px rgba(168,85,247,.15);
+}
+.wawa-pupuh-num {
+  display: inline-block; font-size: .72rem; font-weight: 800;
+  letter-spacing: 1px; color: #a855f7; margin-bottom: 6px;
+}
+.wawa-pupuh-card h4 { margin: 0 0 8px; font-size: 1.08rem; font-family: playfair; color: var(--kelas10-text); }
+.wawa-pupuh-card p { margin: 0; font-size: .83rem; line-height: 1.55; color: var(--kelas10-muted); }
+.wawa-pupuh-note {
+  margin: 16px 0 0; font-size: .84rem; color: var(--kelas10-muted); font-style: italic;
+  padding: 10px 14px; border-left: 3px solid rgba(168,85,247,.4);
+  background: rgba(168,85,247,.05); border-radius: 0 8px 8px 0;
+}
+
+/* --- Conto Box (shared) --- */
+.wawa-conto-box {
+  background: linear-gradient(135deg, rgba(168,85,247,.08), rgba(99,102,241,.06));
+  border: 1px solid rgba(168,85,247,.25); border-radius: 10px; padding: 12px 14px;
+}
+.wawa-conto-label {
+  margin: 0 0 6px; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px; color: #a855f7;
+}
+.wawa-conto-text { margin: 0; font-size: .88rem; line-height: 1.8; color: var(--kelas10-text); }
+
+/* --- Tugas / Video Placeholder --- */
+.wawa-tugas-section { margin-top: 28px; }
+.wawa-tugas-title { font-family: playfair; font-size: clamp(1.2rem,2.5vw,1.55rem); margin-bottom: 6px; }
+.wawa-tugas-desc { margin-bottom: 20px; line-height: 1.7; color: var(--kelas10-muted); }
+.wawa-video-placeholder {
+  width: 100%; aspect-ratio: 16/9; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(168,85,247,.12), rgba(99,102,241,.08), rgba(245,158,11,.07));
+  border: 2px dashed rgba(168,85,247,.4); display: grid; place-items: center;
+  position: relative; overflow: hidden; transition: border-color .3s ease, background .3s ease;
+}
+.wawa-video-placeholder::before {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(168,85,247,.03) 0px, rgba(168,85,247,.03) 1px, transparent 1px, transparent 32px);
+}
+.wawa-video-placeholder:hover {
+  border-color: rgba(168,85,247,.7);
+  background: linear-gradient(135deg, rgba(168,85,247,.16), rgba(99,102,241,.12), rgba(245,158,11,.1));
+}
+.wawa-video-inner {
+  position: relative; z-index: 1; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.wawa-video-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(168,85,247,.25), rgba(99,102,241,.2));
+  border: 2px solid rgba(168,85,247,.4); display: grid; place-items: center;
+  color: rgba(168,85,247,.8); animation: pulse-play 2.5s infinite ease-in-out;
+}
+@keyframes pulse-play {
+  0%,100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(168,85,247,.3); }
+  50%     { transform: scale(1.06); box-shadow: 0 0 0 12px rgba(168,85,247,0); }
+}
+.wawa-video-label { margin: 0; font-size: 1rem; font-weight: 700; color: var(--kelas10-text); }
+.wawa-video-sublabel { margin: 0; font-size: .82rem; color: var(--kelas10-muted); }
+.wawa-video-badge {
+  padding: 4px 14px; border-radius: 999px; font-size: .72rem; font-weight: 700;
+  letter-spacing: .5px; color: #fff; background: linear-gradient(135deg, #a855f7, #6366f1); margin-top: 4px;
+}
+.wawa-tugas-note { margin-top: 14px; font-size: .82rem; color: var(--kelas10-muted); font-style: italic; }
+.wawa-tugas-note code {
+  background: rgba(168,85,247,.12); padding: 2px 6px; border-radius: 4px;
+  font-style: normal; color: #a855f7; font-size: .8rem;
+}
+
+/* --- Darkmode --- */
+.darkmode .wawa-metric-card { border-color: rgba(255,255,255,.14); }
+.darkmode .wawa-conto-box { background: linear-gradient(135deg, rgba(168,85,247,.12), rgba(99,102,241,.08)); border-color: rgba(168,85,247,.3); }
+.darkmode .wawa-conto-text { color: #e2e8f0; }
+.darkmode .wawa-pupuh-card { border-color: rgba(255,255,255,.14); }
+.darkmode .wawa-video-placeholder { background: linear-gradient(135deg, rgba(168,85,247,.1), rgba(99,102,241,.08), rgba(245,158,11,.06)); }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) { .wawa-pupuh-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) {
+  .wawa-metrics { grid-template-columns: repeat(3,1fr); }
+  .wawa-pupuh-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .wawa-metrics { grid-template-columns: 1fr; } }
