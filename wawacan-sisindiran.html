@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 3 Bandung - Wawacan & Sisindiran</title>
+  <meta name="description" content="Materi Basa Sunda Kelas XI: Wawacan dan Sisindiran — genre sastra lisan sarta tulisan Sunda klasik.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/premium.css">
+  <link rel="stylesheet" href="css/babad.css">
+  <link rel="stylesheet" href="css/wawacan.css">
+  <link rel="icon" type="image/x-icon" href="pics/logo sman3.png">
+  <script src="darkmode.js" defer></script>
+  <script src="sekrip.js" defer></script>
+  <script src="js/skrip.js" defer></script>
+  <script src="js/head.js" defer></script>
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-container">
+    <div class="h"></div>
+    <div class="v"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" style="position: fixed;">
+    <div class="brand">
+      <a href="index.html"><img class="logo" src="pics/logo sman3.png" alt="logo sman3"></a>
+      <div>
+        <h1>SMAN 3 Bandung</h1>
+        <p>Knowledge is Power But Character Is more</p>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Imah</a></li>
+        <li>
+          <a>Profil 3</a>
+          <ul>
+            <li><a href="sejarah.html">Sajarah</a></li>
+            <li><a href="guru.html">Guru jeung Staf</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>X</a>
+          <ul>
+            <li><a href="babad.html">Babad</a></li>
+            <li><a href="aksara-sunda.html">Aksara Sunda</a></li>
+            <li><a href="sajak.html">Sajak</a></li>
+            <li><a href="biantara.html">Biantara</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="aktip">XI</a>
+          <ul>
+            <li><a href="warta.html">Warta</a></li>
+            <li><a href="wawacan-sisindiran.html" class="aktip">Wawacan & Sisindiran</a></li>
+          </ul>
+        </li>
+        <li><a>XII</a></li>
+        <li><a href="kontak.html" class="kontak">Kontak</a></li>
+        <li><a href="#" onclick="toggleTheme()" id="theme-toggle" class="theme-btn-icon"></a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <h1 class="title-pg-babad wawa-title">Wawacan &amp; Sisindiran</h1>
+
+  <main class="container babad-container">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="babad-hero wawa-hero">
+      <div class="hero-inner">
+        <p class="babad-tag">XI — Materi Basa Sunda</p>
+        <h2>Sastra Lisan jeung Tulisan Sunda Klasik</h2>
+        <p class="babad-lead">
+          Wawacan jeung sisindiran mangrupa dua warisan sastra Sunda nu kacida ngandung
+          ajén budaya. Wawacan mangrupa karya sastra panjang nu ditulis dina wangun pupuh,
+          sedengkeun sisindiran mangrupa wangun ugeran pondok nu pinuh ku silih asih, humor,
+          jeung kritik sosial.
+        </p>
+        <div class="wawa-chip-row">
+          <span>Pupuh</span>
+          <span>Ugeran</span>
+          <span>Sastra Klasik</span>
+          <span>Warisan Budaya</span>
+        </div>
+      </div>
+      <div class="babad-hero-card">
+        <h3>Dua Wangun Sastra Sunda</h3>
+        <ul class="babad-list" style="color:#fff;">
+          <li><strong>Wawacan</strong> — carita panjang dina wangun pupuh.</li>
+          <li><strong>Sisindiran</strong> — ugeran pondok nu aya sampiran jeung eusi.</li>
+          <li>Duanana ngagunakeun purwakanti (rima) nu diatur.</li>
+          <li>Biasa dipaké dina upacara adat jeung hiburan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== METRIC SECTION ===== -->
+    <section class="wawa-metrics">
+      <article class="wawa-metric-card">
+        <p class="wawa-metric-value">17</p>
+        <p class="wawa-metric-label">Jenis Pupuh</p>
+      </article>
+      <article class="wawa-metric-card">
+        <p class="wawa-metric-value">3</p>
+        <p class="wawa-metric-label">Jenis Sisindiran</p>
+      </article>
+      <article class="wawa-metric-card">
+        <p class="wawa-metric-value">2</p>
+        <p class="wawa-metric-label">Bagian Sisindiran</p>
+      </article>
+    </section>
+
+    <!-- ===== WAWACAN INTRO ===== -->
+    <section class="babad-intro">
+      <article class="babad-intro-box">
+        <div class="babad-intro-head">
+          <p class="babad-intro-kicker">Pangaweruh Dasar</p>
+          <h3>Naon Ari Wawacan?</h3>
+          <p class="babad-intro-lead">
+            Wawacan nyaéta karya sastra Sunda nu mangrupa carita panjang ditulis dina
+            wangun ugeran (puisi) ngagunakeun pupuh. Eusina umumna nyaritakeun
+            perjuangan, roman, atawa ajaran moral nu kuat. Wawacan sering dibacakeun
+            kalayan dilagukeun (tembang) dina acara-acara adat jsb.
+          </p>
+        </div>
+        <div class="babad-intro-content wawa-ciri-grid">
+          <div class="babad-intro-panel">
+            <h4>✦ Ciri Khas Wawacan</h4>
+            <ul class="babad-intro-list">
+              <li>Ditulis dina wangun pupuh (jenis ugeran Sunda buhun).</li>
+              <li>Eusina carita anu panjang jeung berkesinambungan.</li>
+              <li>Unggal kagantian suasana diganti ku pupuh nu béda.</li>
+              <li>Mindeng dibacakeun dina tradisi beluk atawa macakal.</li>
+            </ul>
+          </div>
+          <div class="babad-intro-panel">
+            <h4>✦ Conto Wawacan Kasohor</h4>
+            <ul class="babad-intro-list">
+              <li><strong>Wawacan Panji Wulung</strong> — carita cinta jeung perjuangan.</li>
+              <li><strong>Wawacan Ciung Wanara</strong> — sajarah Kerajaan Sunda.</li>
+              <li><strong>Wawacan Sulanjana</strong> — asal usul paré (pare).</li>
+              <li><strong>Wawacan Pandawa Lima</strong> — adaptasi Mahabharata versi Sunda.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== PUPUH SECTION ===== -->
+    <section class="babad-intro wawa-pupuh-section">
+      <article class="babad-intro-box">
+        <div class="babad-intro-head">
+          <p class="babad-intro-kicker">Struktur Wawacan</p>
+          <h3>Pupuh — Aturan Guru Wilangan jeung Guru Lagu</h3>
+          <p class="babad-intro-lead">
+            Pupuh mangrupa hiji wangun puisi Sunda buhun nu unggal jenisna miboga aturan
+            tetep ngeunaan jumlah engang <em>(guru wilangan)</em> jeung vokal ahir unggal padalisan
+            <em>(guru lagu)</em>. Aya 17 jenis pupuh anu ilahar dipaké dina Wawacan.
+          </p>
+        </div>
+        <div class="wawa-pupuh-grid">
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">01</span>
+            <h4>Kinanti</h4>
+            <p>Nyeratan rasa sono, kangen, atawa nganti. Guru wilangan: 8-8-8-8-8-8. Guru lagu: u-i-a-i-a-i.</p>
+          </div>
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">02</span>
+            <h4>Sinom</h4>
+            <p>Nyeratan kabudayaan, karesep, jeung kakalem. Guru wilangan: 8-8-8-8-7-8-7-8-12. Guru lagu: a-i-a-i-i-u-a-i-a.</p>
+          </div>
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">03</span>
+            <h4>Asmarandana</h4>
+            <p>Nyeratan kasono, asih, jeung kahariwang. Guru wilangan: 8-8-8-8-7-8-8. Guru lagu: i-a-e-a-a-u-a.</p>
+          </div>
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">04</span>
+            <h4>Dangdanggula</h4>
+            <p>Nyeratan kaagulan, kaendahan, jeung kasantunan. Guru wilangan: 10-10-8-7-9-7-6-8-12-7. Guru lagu: i-a-e-u-i-a-u-a-i-a.</p>
+          </div>
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">05</span>
+            <h4>Durma</h4>
+            <p>Nyeratan amarah, semangat, jeung kasantrian. Guru wilangan: 12-7-6-7-8-5-7. Guru lagu: a-i-a-a-i-a-i.</p>
+          </div>
+          <div class="wawa-pupuh-card">
+            <span class="wawa-pupuh-num">06</span>
+            <h4>Pangkur</h4>
+            <p>Nyeratan kagigihan jeung kasemangatan berjuang. Guru wilangan: 8-11-8-7-12-8-8. Guru lagu: a-i-u-a-u-a-i.</p>
+          </div>
+        </div>
+        <p class="wawa-pupuh-note">+ 11 jenis pupuh séjén: Mijil, Maskumambang, Magatru, Gambuh, Wirangrong, Pucung, Gurisa, Jurudemung, Ladrang, Lambang, Balakbak.</p>
+      </article>
+    </section>
+
+    <!-- ===== SISINDIRAN INTRO ===== -->
+    <section class="babad-intro wawa-sind-section">
+      <article class="babad-intro-box">
+        <div class="babad-intro-head">
+          <p class="babad-intro-kicker">Bagian Kadua</p>
+          <h3>Naon Ari Sisindiran?</h3>
+          <p class="babad-intro-lead">
+            Sisindiran nyaéta wangun ugeran Sunda anu diwangun ku <strong>sampiran</strong> jeung
+            <strong>eusi</strong>, mirip pantun dina basa Melayu. Umumna diwangun ku 4 padalisan kalayan
+            purwakanti (rima) a-b-a-b. Dipaké pikeun nepikeun rasa asih, maksud, atawa kritik
+            sacara halus jeung teu langsung.
+          </p>
+        </div>
+        <div class="babad-intro-content">
+          <div class="babad-intro-panel">
+            <h4>📍 Sampiran (Bagian 1 &amp; 2)</h4>
+            <ul class="babad-intro-list">
+              <li>Dua padalisan mimiti nu jadi "umpan" rima.</li>
+              <li>Eusina biasana ngeunaan alam, sasatoan, atawa barang.</li>
+              <li>Teu aya hubungan langsung jeung eusi (makna asli).</li>
+              <li>Ngabentuk purwakanti jeung dua padalisan eusi.</li>
+            </ul>
+          </div>
+          <div class="babad-intro-panel">
+            <h4>💡 Eusi (Bagian 3 &amp; 4)</h4>
+            <ul class="babad-intro-list">
+              <li>Dua padalisan tukang nu ngandung maksud sabenerna.</li>
+              <li>Biasana nepikeun rasa asih, pepatah, atawa sindiran.</li>
+              <li>Rimana kudu cocog jeung sampiran di luhur.</li>
+              <li>Inilah inti pesen anu hayang ditepikeun.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== JENIS SISINDIRAN CARDS ===== -->
+    <section class="babad-grid wawa-sind-grid">
+      <article class="babad-card wawa-sind-card">
+        <div class="wawa-sind-badge wawa-badge-rarakitan">Rarakitan</div>
+        <h3>Rarakitan</h3>
+        <p>Sisindiran nu eusi jeung sampiran na unggal padalisan silih sambung. Unggal kecap dina sampiran patali jeung kecap dina eusi. Biasana nepikeun rasa asih atawa kasono.</p>
+        <div class="wawa-conto-box">
+          <p class="wawa-conto-label">Conto:</p>
+          <p class="wawa-conto-text">
+            <em>Aya manuk dina dahan,<br>
+            Huluna maké mahkota.<br>
+            Aya nu keur nindakan,<br>
+            Abdi mah teu kuciwa.</em>
+          </p>
+        </div>
+      </article>
+      <article class="babad-card wawa-sind-card">
+        <div class="wawa-sind-badge wawa-badge-paparikan">Paparikan</div>
+        <h3>Paparikan</h3>
+        <p>Sisindiran biasa nu wangunna 4 padalisan. Dua padalisan mimiti mangrupa sampiran, dua padalisan saterusna mangrupa eusi. Nu paling umum jeung populér dina kahirupan sapopoé.</p>
+        <div class="wawa-conto-box">
+          <p class="wawa-conto-label">Conto:</p>
+          <p class="wawa-conto-text">
+            <em>Ulah resep ka nu jauh,<br>
+            Mending deukeut we ka lembur.<br>
+            Ulah resep milih-milih,<br>
+            Mending daék ka nu bener.</em>
+          </p>
+        </div>
+      </article>
+      <article class="babad-card wawa-sind-card">
+        <div class="wawa-sind-badge wawa-badge-wawangsalan">Wawangsalan</div>
+        <h3>Wawangsalan</h3>
+        <p>Teka-teki dina wangun ugeran. Padalisan mimiti jadi pancén atawa teka-teki, tukangna jadi jawaban nu didadasaran kana kecap barangsna. Ngajalin pikiran jeung rasa.</p>
+        <div class="wawa-conto-box">
+          <p class="wawa-conto-label">Conto:</p>
+          <p class="wawa-conto-text">
+            <em>Nu matak resep ditempo,<br>
+            Lalangit taya tatanggana.<br>
+            Nu matak resep didéngé,<br>
+            Sora manuk dina dahan.</em>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== STRUKTUR VISUAL SISINDIRAN ===== -->
+    <section class="babad-story wawa-struktur-section">
+      <h3>Struktur Sisindiran: Paparikan</h3>
+      <p class="wawa-struktur-intro">
+        Dina sisindiran jenis paparikan, pola rimana nyaéta <strong>a-b-a-b</strong>. Vokal ahir
+        padalisan 1 sarua jeung padalisan 3, vokal ahir padalisan 2 sarua jeung padalisan 4.
+        Ieu diagram nétélakeun strukturna sacara visual:
+      </p>
+      <div class="wawa-diagram">
+        <div class="wawa-diagram-col wawa-col-sampiran">
+          <div class="wawa-diagram-label">SAMPIRAN</div>
+          <div class="wawa-diagram-row">
+            <span class="wawa-line-num">1</span>
+            <div class="wawa-line-bar">
+              <span class="wawa-rima rima-a">Vokal akhir: <strong>a</strong></span>
+              Padalisan kecap alam / barang / sasatoan
+            </div>
+          </div>
+          <div class="wawa-diagram-row">
+            <span class="wawa-line-num">2</span>
+            <div class="wawa-line-bar">
+              <span class="wawa-rima rima-b">Vokal akhir: <strong>b</strong></span>
+              Padalisan kecap alam / barang / sasatoan
+            </div>
+          </div>
+        </div>
+        <div class="wawa-diagram-col wawa-col-eusi">
+          <div class="wawa-diagram-label">EUSI</div>
+          <div class="wawa-diagram-row">
+            <span class="wawa-line-num">3</span>
+            <div class="wawa-line-bar">
+              <span class="wawa-rima rima-a">Vokal akhir: <strong>a</strong></span>
+              Padalisan nu ngandung maksud / pesan
+            </div>
+          </div>
+          <div class="wawa-diagram-row">
+            <span class="wawa-line-num">4</span>
+            <div class="wawa-line-bar">
+              <span class="wawa-rima rima-b">Vokal akhir: <strong>b</strong></span>
+              Padalisan nu ngandung maksud / pesan
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TABEL PERBANDINGAN ===== -->
+    <section class="babad-story wawa-compare-section">
+      <h3>Ngabandingkeun Wawacan jeung Sisindiran</h3>
+      <div class="table-wrap">
+        <table class="wawa-table">
+          <thead>
+            <tr>
+              <th>Aspék</th>
+              <th>Wawacan</th>
+              <th>Sisindiran</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Panjang</strong></td>
+              <td>Panjang (beratus pada)</td>
+              <td>Pondok (4 padalisan)</td>
+            </tr>
+            <tr>
+              <td><strong>Wangun</strong></td>
+              <td>Pupuh (17 jenis)</td>
+              <td>Ugeran bébas kalayan rima</td>
+            </tr>
+            <tr>
+              <td><strong>Eusi</strong></td>
+              <td>Carita / Carpon panjang</td>
+              <td>Perasaan, sindiran, naséhat</td>
+            </tr>
+            <tr>
+              <td><strong>Cara Disampaikan</strong></td>
+              <td>Dilagukeun (tembang / beluk)</td>
+              <td>Dibaca atawa diucapkeun</td>
+            </tr>
+            <tr>
+              <td><strong>Fungsi</strong></td>
+              <td>Hiburan jeung ajaran moral</td>
+              <td>Silih asih, kritik, humor</td>
+            </tr>
+            <tr>
+              <td><strong>Contona</strong></td>
+              <td>Wawacan Ciung Wanara</td>
+              <td>Paparikan, Rarakitan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE / ALUR BELAJAR ===== -->
+    <section class="babad-timeline">
+      <h3>Léngkah Diajar Sisindiran</h3>
+      <ol>
+        <li><span>Kenali</span> Téangan sarta baca conto sisindiran ti rupa-rupa sumber.</li>
+        <li><span>Analisis</span> Pisahkeun mana sampiran jeung mana eusina, terus cek rimana.</li>
+        <li><span>Latihan</span> Cobaan nyieun sampiran ku sorangan tina tema nu gampang.</li>
+        <li><span>Susun</span> Pasangkeun sampiran nu dibuat jeung eusi nu merenah rimana.</li>
+        <li><span>Uji</span> Bacakeun ka batur pikeun meunangkeun masukan jeung pamahaman.</li>
+        <li><span>Sajikan</span> Tampilkeun sisindiran nu geus jadi dina wangun lisan atawa tulisan.</li>
+      </ol>
+    </section>
+
+    <!-- ===== QUOTE ===== -->
+    <section class="babad-quote">
+      <p>
+        "Sisindiran téh lain ngan ukur kaulinan basa — eta mangrupa cermin budaya,
+        tempat urang Sunda nepikeun rasa nu teu bisaeun diomongkeun sacara langsung."
+      </p>
+    </section>
+
+    <!-- ===== TUGAS VIDEO PLACEHOLDER ===== -->
+    <section class="babad-story wawa-tugas-section">
+      <h3 class="wawa-tugas-title">📹 Tugas: Video Pratek Sisindiran</h3>
+      <p class="wawa-tugas-desc">
+        Di handap ieu mangrupa tempat pikeun video tugas nyieun jeung maca sisindiran.
+        Video bakal dipintonkeun di dieu saatos dikumpulkeun.
+      </p>
+      <div class="wawa-video-placeholder">
+        <div class="wawa-video-inner">
+          <div class="wawa-video-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="56" height="56">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <p class="wawa-video-label">Video Tugas</p>
+          <p class="wawa-video-sublabel">Wawacan &amp; Sisindiran — Kelas XI</p>
+          <div class="wawa-video-badge">Akan Datang</div>
+        </div>
+      </div>
+      <p class="wawa-tugas-note">
+        ⚠️ Placeholder ieu bisa diganti ku <code>&lt;iframe&gt;</code> YouTube atawa elemen video nalika tugas geus siap.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SMAN 3 Bandung. All rights reserved.</p>
+  </footer>
+</body>
+</html>

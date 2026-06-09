@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMAN 3 Bandung - Dongeng Babad</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/premium.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/babad.css">
     <link rel="icon" type="image/x-icon" href="pics/logo sman3.png">
-    <script type="text/javascript" src="darkmode.js"></script>
+    <script src="darkmode.js" defer></script>
     <script src="sekrip.js" defer></script>
     <script src="js/skrip.js" defer></script>
     <script src="js/head.js" defer></script>
@@ -17,9 +18,10 @@
 
 <body>
     <div class="bg-container">
-        <div class="rainbow"></div><div class="rainbow"></div><div class="rainbow"></div>
         <div class="h"></div>
         <div class="v"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
     </div>
 
     <header class="header" style="position: fixed;">
@@ -33,18 +35,16 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="index.html" >Imah</a>
-            </li>
+            <li><a href="index.html">Imah</a></li>
             <li>
                 <a>Profil 3</a>
                 <ul>
                     <li><a href="sejarah.html">Sajarah</a></li>
-                    
                     <li><a href="guru.html">Guru jeung Staf</a></li>
                 </ul>
             </li>
             <li>
-                <a class="aktip">Kelas 10</a>
+                <a class="aktip">X</a>
                 <ul>
                     <li><a href="babad.html" class="aktip">Babad</a></li>
                     <li><a href="aksara-sunda.html">Aksara Sunda</a></li>
@@ -53,23 +53,16 @@
                 </ul>
             </li>
             <li>
-                <a>Kelas 11</a>
+                <a>XI</a>
                 <ul>
                     <li><a href="warta.html">Warta</a></li>
-                    
+                    <li><a href="wawacan.html">Wawacan</a></li>
+                    <li><a href="sisindiran.html">Sisindiran</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="" >Kelas 12</a>
-                <ul>
-                    
-                </ul>
-            </li>
+            <li><a>XII</a></li>
             <li><a href="kontak.html" class="kontak">Kontak</a></li>
-            <button id="theme-switch" class="theme-switch">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 60q-74.92 0-127.46-52.54Q300-405.08 300-480q0-74.92 52.54-127.46Q405.08-660 480-660q74.92 0 127.46 52.54Q660-554.92 660-480q0 74.92-52.54 127.46Q554.92-300 480-300ZM200-450H50v-60h150v60Zm710 0H760v-60h150v60ZM450-760v-150h60v150h-60Zm0 710v-150h60v150h-60ZM262.92-656.92l-93.69-90.46 42.39-44.39 90.23 92.69-38.93 42.16Zm485.46 488.69-90.84-93.31 39.54-41.54 93.69 90.46-42.39 44.39Zm-91.46-528.85 90.46-93.69 44.39 42.39-92.69 90.23-42.16-38.93ZM168.23-211.62l93.31-90.84 40.77 39.54-90.08 94.07-44-42.77ZM480-480Z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M594.23-648.08 488.46-753.85l105.77-105.76L700-753.85 594.23-648.08Zm200 120-65.77-65.77 65.77-65.76L860-593.85l-65.77 65.77ZM483-100q-79.77 0-149.61-30.27-69.85-30.27-121.85-82.27t-82.27-121.85Q99-404.23 99-484q0-131.38 80.12-234.04 80.11-102.65 207.19-134.65-11.08 96.31 19.84 186.77 30.93 90.46 99.62 159.15 68.69 68.69 159.15 99.62 90.46 30.92 186.77 19.84-31.38 127.08-134.35 207.19Q614.38-100 483-100Zm0-60q88 0 163-44t118-121q-86-8-163-43.69t-138-96.69q-61-61-97-137.81T323-766q-77 43-120.5 118.5T159-484q0 135 94.5 229.5T483-160Zm-20-305.38Z"/></svg>
-            </button>
+            <li><a href="#" onclick="toggleTheme()" id="theme-toggle" class="theme-btn-icon"></a></li>
         </ul>
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
@@ -83,7 +76,7 @@
     <main class="container babad-container">
         <section class="babad-hero">
             <div class="hero-inner">
-                <p class="babad-tag">Kelas 10 - Tugas Basa Sunda</p>
+                <p class="babad-tag">X - Tugas Basa Sunda</p>
                 <h2>Babad Limbangan: Silsilah jeung Perjuangan</h2>
                 <p class="babad-lead">
                     Ieu babad nyaritakeun hubungan antara Karajaan Pajajaran sareng luluhur Limbangan. 

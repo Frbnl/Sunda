@@ -1,48 +1,39 @@
+// darkmode.js - Simplified Light/Dark Toggle
 document.addEventListener('DOMContentLoaded', () => {
-  const themeSwitch = document.querySelector('#theme-switch, .theme-switch')
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
 
-  const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
-  }
-
-  const disableDarkmode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.removeItem('darkmode')
-  }
-
-  const applyBackgroundState = () => {
-    const bgReact = document.getElementById('root')
-    const bgRainbow = document.querySelector('.bg-container')
-
-    // Keep legacy background behavior: do not use the React background layer.
-    if (bgReact) {
-      bgReact.style.opacity = '0'
-      bgReact.style.display = 'none'
+    function updateToggleText(isDark) {
+        if (themeToggle) {
+            themeToggle.innerHTML = isDark 
+                ? `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></svg>` 
+                : `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+        }
     }
-    // Preserve the site's original background layer in both themes.
-    if (bgRainbow) bgRainbow.style.display = 'block'
-  }
 
-  const stored = localStorage.getItem('darkmode')
-  if (stored === 'active') enableDarkmode()
+    window.setTheme = function(theme) {
+        if (theme === 'darkmode') {
+            body.classList.add('darkmode');
+            body.classList.remove('lightmode'); // If you use lightmode class
+            localStorage.setItem('site-theme', 'darkmode');
+            updateToggleText(true);
+        } else {
+            body.classList.remove('darkmode');
+            body.classList.add('lightmode');
+            localStorage.setItem('site-theme', 'lightmode');
+            updateToggleText(false);
+        }
+    };
 
-  window.toggleTheme = () => {
-    const active = localStorage.getItem('darkmode') === 'active'
-    active ? disableDarkmode() : enableDarkmode()
-    applyBackgroundState()
-  }
+    window.toggleTheme = function() {
+        const isDark = body.classList.contains('darkmode');
+        setTheme(isDark ? 'lightmode' : 'darkmode');
+    };
 
-  if (themeSwitch) {
-    // Some pages still use inline onclick="toggleTheme()".
-    // Avoid double toggling by only binding here when no inline handler exists.
-    if (!themeSwitch.hasAttribute('onclick')) {
-      themeSwitch.addEventListener('click', (event) => {
-        if (event) event.preventDefault()
-        window.toggleTheme()
-      })
-    }
-  }
+    // Initial Load
+    const savedTheme = localStorage.getItem('site-theme') || 'lightmode';
+    setTheme(savedTheme);
 
-  applyBackgroundState()
-})
+    // Initial text update in case it was missed
+    updateToggleText(body.classList.contains('darkmode'));
+});

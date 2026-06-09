@@ -21,7 +21,7 @@
 @font-face {
   font-family: proximanova;
   src: url(font/Fontspring-DEMO-proximanova-bold.otf);
-}
+}z
 :root {
   --bg-light: #fcfcfc;
   --bg-box: #f4f4f4;
@@ -99,12 +99,68 @@
   background-size: 100%;
   background-position: 0% 20%;
 }
+.brownmode{
 
+  /* main surfaces */
+  --bg-light: #2b2118;
+  --bg-box: #3a2e23;
+  --bg-box-lighter:#46382b;
+  --bg-box-05: rgba(43,33,24,0.6);
 
+  /* header */
+  --header-bg: rgba(43,33,24,0.9);
+  --header-border: rgba(190,160,110,0.15);
+
+  /* text */
+  --text-dark:#efe6d8;
+  --text-white:#efe6d8;
+  --abu:#b8a792;
+
+  /* accents */
+  --accent:#b06a3c;
+  --accent-gold:#d1a763;
+  --accent-light:rgba(176,106,60,0.12);
+
+  /* cards */
+  --card-bg:rgba(70,55,42,0.7);
+  --card-border:rgba(210,170,120,0.18);
+
+  /* sejarah */
+  --hist-bg:#2b2118;
+  --hist-card:#3a2e23;
+  --hist-accent:#b06a3c;
+  --hist-gold:#d1a763;
+  --hist-muted:#c6b29a;
+
+  /* kill rainbow animation colors */
+  --purple: transparent;
+  --blue: transparent;
+  --green: transparent;
+
+  /* disable animation speed */
+  --anim-time: 0s;
+}
+/* flat background for custom themes */
+body.brownmode,
+body.no-animated-bg{
+  background-color: #2b2118;
+  background-image: none !important;
+}
+
+/* kill animated layers */
+body.no-animated-bg::before,
+body.no-animated-bg::after{
+  display:none !important;
+}
+
+/* if animation is applied directly */
+body.no-animated-bg{
+  animation:none !important;
+}
 /* GENERAL BODY SETTINGS */
 html, body {
   /* Changed from solid color to transparent so fixed animation shows */
-  background-color: transparent; 
+  
   overflow-x:hidden;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -355,37 +411,44 @@ header {
   backdrop-filter: blur(6px); 
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 2%, rgba(111, 111, 111, 0.1) );
   color: rgb(0, 0, 0);
+  border-radius: 30px;
   padding: 20px;
-  max-height: 70px;
+  max-height: 40px;
   display: flex;
   align-items: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 20px;
+  left: 10%;
+  width: 80%;
   z-index: 1000;
   animation: drop 1s ease-out;
+}
+.scrolled header {
+  width: 80%;
+  margin: 0 auto;
+  margin: 10px 10px 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 .brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 0.42;
+  line-height: 0.72;
 }
 .brand div p {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 11px;
   color: var(--abu);
 }
 
 header .logo {
-  width: 60px;
+  width: 50px;
   height: auto;
   margin: 0;
   margin-right: 20px;
-  margin-left: 100px;
+  margin-left: 20px;
   -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1)); 
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
 }
@@ -2314,4 +2377,13 @@ footer{padding:20px 0;
     width: 220px;
     height: 124px;
   }
+}
+/* disable rainbow system for brown theme */
+body.brownmode .bg-container{
+  display: none;
+}
+
+/* flat background */
+body.brownmode{
+  background: #2b2118;
 }

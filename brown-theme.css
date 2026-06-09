@@ -1,0 +1,123 @@
+/* brown-flat.css
+   Dark, comfy, flat-color theme. Keeps layout but applies flat brown surfaces.
+   Add <link rel="stylesheet" href="brown-flat.css"> AFTER style.css in <head>.
+*/
+
+:root {
+  --brown-bg: #1f1410;        /* page background */
+  --brown-surface: #2d211c;   /* cards, panels */
+  --brown-surface-2: #3a2a24; /* slightly lighter surfaces */
+  --accent: #b88f6d;          /* warm accent (buttons, links) */
+  --muted: #a88f7b;           /* secondary text */
+  --text: #f6efe8;            /* primary text */
+  --border: #36261f;          /* subtle borders */
+  --shadow: rgba(0,0,0,0.55);
+}
+
+/* Apply to body when theme is active */
+body.flat-brown {
+  background-color: var(--brown-bg);
+  color: var(--text);
+  --bg-light: var(--brown-bg);       /* keep site variable usage compatible */
+  --bg-box: var(--brown-surface);
+  --text-dark: var(--text);
+  --text-white: var(--text);
+  --abu: var(--muted);
+  --header-dark: rgba(14,10,9,0.95);
+}
+
+/* Simple, flat header */
+body.flat-brown header {
+  background: var(--brown-surface);
+  color: var(--text);
+  box-shadow: 0 6px 18px var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Navbar links */
+body.flat-brown nav ul li a {
+  color: var(--text);
+  background: transparent;
+}
+body.flat-brown nav ul li a:hover,
+body.flat-brown nav ul li a.aktip {
+  background: var(--brown-surface-2);
+  color: var(--text);
+  box-shadow: none;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Banner: make it darker and flat */
+body.flat-brown .banner {
+  background-color: var(--brown-surface);
+  background-image: none !important;
+  color: var(--text);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+/* Profile & cards */
+body.flat-brown .profile-box,
+body.flat-brown .ceuk-hero-card,
+body.flat-brown .profile-meta-card,
+body.flat-brown .berita-news,
+body.flat-brown .artikel,
+body.flat-brown .sosmed,
+body.flat-brown .info {
+  background: var(--brown-surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+/* Buttons and links accent */
+body.flat-brown .spotlight-btn,
+body.flat-brown .kontak,
+body.flat-brown .social-bar a {
+  background: var(--accent);
+  color: #23140d; /* dark text on warm accent */
+  border: none;
+  box-shadow: none;
+}
+body.flat-brown a {
+  color: var(--accent);
+}
+
+/* Carousel captions */
+body.flat-brown .carousel-caption,
+body.flat-brown .card-text {
+  color: var(--text);
+}
+
+/* Subtle text colors */
+body.flat-brown .prof-subtitle,
+body.flat-brown .meta-label,
+body.flat-brown .diposting,
+body.flat-brown .ceuk-tag,
+body.flat-brown .sumber-kepsek,
+body.flat-brown .ceuk-list li {
+  color: var(--muted);
+}
+
+/* Image treatments */
+body.flat-brown .profile-photo img,
+body.flat-brown .spotlight-card img,
+body.flat-brown .owl-carousel .item img {
+  filter: contrast(0.95) saturate(0.95);
+  border-radius: 8px;
+}
+
+/* Form / input / small controls (if any) */
+body.flat-brown input,
+body.flat-brown select,
+body.flat-brown textarea,
+body.flat-brown button {
+  background: var(--brown-surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Mobile adjustments retained */
+@media (max-width: 768px) {
+  body.flat-brown .banner { height: 80vh; }
+  body.flat-brown header { padding: 12px; } }
